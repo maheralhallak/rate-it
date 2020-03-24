@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 1),
+    
   }
   
 }));
@@ -103,6 +104,11 @@ export default function SignIn() {
             fullWidth
             variant="contained"
             color="primary"
+            size="large"
+            style={{
+              background: 'rgb(0,80,40)',
+              background: 'radial-gradient(circle, rgba(0,80,40,1) 0%, rgba(79,154,0,1) 51%, rgba(141,159,0,1) 100%)' 
+            }}
             className={classes.submit}
           >
             Log In
