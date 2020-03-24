@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import TabsWrappedLabel from './components/navbar/NavBar'
+import SignIn from './components/signin/Signin'
 
 
 function App() {
 
   return (
     <div className="App">
-      <TabsWrappedLabel />
+      <SignIn />
       
     </div>
   );
