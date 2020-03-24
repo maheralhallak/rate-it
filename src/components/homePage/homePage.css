@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Baloo 2", cursive;
+  background-color: whitesmoke;
+}
+
+.cart {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  font-weight: 500;
+  background: linear-gradient(to right, #1d6109, #c36914);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #36881c;
+}
+
+.example {
+  padding: 50px 0px 0px 0px;
+  display: flex;
+}
+
+/* Button */
+a {
+  font-family: "Baloo 2", cursive;
+  border: none;
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #123b0e;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.8s;
+}
+
+a span {
+  position: relative;
+  z-index: 2;
+  font-family: "Baloo 2", cursive;
+}
+
+a:after {
+  font-family: "Baloo 2", cursive;
+  border: none;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #e1b738;
+  transition: all 0.35s;
+}
+
+a:hover {
+  color: #36881c;
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+/* End button  */
+.cover {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
+
+.cover img {
+  padding-top: 400px;
+  height: 100%;
+  /* if you have PNG picture you can add a shadow to it by using the filter. */
+  filter: drop-shadow(0px 10px 6px rgb(219, 151, 4));
+  animation: drop 2.5s ease;
+}
+
+.big-star {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  opacity: 0.2;
+  height: 80%;
+}
+
+.mid-icon {
+  position: absolute;
+  top: 40%;
+  right: 53%;
+  z-index: -1;
+  height: 60%;
+  opacity: 0.2;
+  width: 50%;
+  height: 50%;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: translateY(0px);
+  }
+}
+
+/* to make it mobile freindly   */
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: cloumn;
+  }
+
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 35px;
+  }
+
+  .introduction p {
+    font-size: 20px;
+  }
+
+  .cover img {
+    height: 70%;
+  }
+
+  .mid-icon,
+  .big-star {
+    opacity: 0.1;
+  }
+}
+
+/* Animation */
+
+html,
+html {
+  height: 100%;
+  display: flex;
+}
+
+body {
+  margin: auto;
+  overflow: hidden;
+}
+
+#text {
+  font-family: "Baloo 2", cursive;
+  font-weight: 800;
+  font-size: 7vw;
+  transform: skewY(0deg);
+  visibility: hidden;
+  color: #123b0e;
+  animation: display 2s cubic-bezier(0.6, 0, 0.15, 1) 3s forwards;
+  position: relative;
+}
+
+#text:before,
+#text:after {
+  content: attr(data-text);
+  visibility: visible;
+  color: yellow;
+  position: absolute;
+  left: 0;
+  display: block;
+  top: auto;
+  bottom: 0;
+  z-index: 3;
+}
+
+#text:before {
+  color: rgb(233, 199, 10);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  animation: move-left 1.5s cubic-bezier(0.6, 0, 0.15, 1),
+    blur 1s linear 3s forwards;
+}
+
+#text:after {
+  color: rgb(216, 202, 8);
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  animation: move-right 2s cubic-bezier(0.6, 0, 0.15, 1),
+    blur 1s linear 3s forwards;
+}
+
+@keyframes move-left {
+  from {
+    transform: translate(-1000%, -120%);
+  }
+
+  50% {
+    transform: translate(0%, -120%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translate(1000%, 90%);
+  }
+
+  50% {
+    transform: translate(0%, 90%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes blur {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes display {
+  from {
+    visibility: hidden;
+    transform: skewY(0deg) scale(0);
+  }
+
+  to {
+    visibility: visible;
+    transform: skewY(0deg) scale(1);
+  }
+}
