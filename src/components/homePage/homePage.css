@@ -7,7 +7,6 @@
 }
 
 body {
-  font-family: "Baloo 2", cursive;
   background-color: whitesmoke;
 }
 
@@ -17,6 +16,7 @@ body {
 }
 
 .presentation {
+  font-family: "Baloo 2", cursive;
   display: flex;
   width: 90%;
   margin: auto;
