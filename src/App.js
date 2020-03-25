@@ -1,12 +1,11 @@
 
 import React from "react";
 import "./App.css";
-import HomePage from "./components/homePage/HomePage";
-
-import './App.css';
 
 
 import SignIn from './components/signin/Signin'
+import SignUp from './components/register/Register'
+import HomePage from './components/homePage/HomePage'
 
 
 function App() {
@@ -16,8 +15,8 @@ function App() {
 
       <HomePage />
 
-      <SignIn />
-      
+      {/* <SignIn />
+      <SignUp /> */} 
     </div>
   );
 }

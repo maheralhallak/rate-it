@@ -49,12 +49,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const defaultProps = {
-  bgcolor: 'background.paper',
+  bgcolor: '#EEEE',
   m: 1,
-  border: 1,
+  border: 0,
   margin: 0,
   marginTop:8,
   left:0,
+  boxShadow: '10px 10px 40px #222831',
   style: { width: '50vh', height: '50wh' },
 };
 
@@ -63,8 +64,8 @@ export default function SignIn() {
   
   return (
     
-    <Container {...defaultProps} component="main" maxWidth="lg" >
-      <Box borderColor="black.500" padding={2} {...defaultProps}>
+    <Container {...defaultProps} component="main" maxWidth="xl" >
+      <Box padding={2} {...defaultProps}>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -105,10 +106,6 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             size="large"
-            style={{
-              background: 'rgb(0,80,40)',
-              background: 'radial-gradient(circle, rgba(0,80,40,1) 0%, rgba(79,154,0,1) 51%, rgba(141,159,0,1) 100%)' 
-            }}
             className={classes.submit}
           >
             Log In
