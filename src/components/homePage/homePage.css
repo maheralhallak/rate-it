@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Baloo 2", cursive;
-  background-color: whitesmoke;
-}
 
 .cart {
   flex: 1;
