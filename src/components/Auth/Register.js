@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState , useEffect} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -35,18 +35,24 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    padding: '5',
+    
   },
   avatar: {
     margin: theme.spacing(0),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.secondary.primary,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '80%', // Fix IE 11 issue.
     marginTop: theme.spacing(0),
   },
   submit: {
     margin: theme.spacing(3, 0, 1),
     
+  },
+  parent:{
+    display: 'flex',
+    alignItems:'center'
   }
   
 }));
@@ -56,10 +62,10 @@ const defaultProps = {
   m: 1,
   border: 0,
   margin: 0,
-  marginTop:8,
+  marginTop:5,
   left:0,
   boxShadow: '10px 10px 40px #222831',
-  style: { width: '80vh', height: '50wh' },
+  style: { width: '100%', height: '100%' },
 };
 
 
@@ -67,23 +73,30 @@ const defaultProps = {
    
 
 export default function SignUp() {
+
+  const [count ,setCount]= useState(0)
+  useEffect(() =>{
+    document.title= `you have clicked ${count} times `;
+  });
+
   const classes = useStyles();
   
-  const [value, setValue] = React.useState('female');
+  const [value, setValue] = React.useState('');
   
   const handleChange = event => {
     setValue(event.target.value);
   }
+
   return (
-    
-    <Container {...defaultProps} component="main" maxWidth="xl" >
+    <div className="parent">
+    <Container component="main" maxWidth="xl" >
       <Box padding={2} {...defaultProps}>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
         </Avatar>
         <Typography component="h1" variant="h5">
-          Log in
+         Sign Up
         </Typography>
         <form className={classes.form} noValidate>
         <TextField
@@ -105,15 +118,16 @@ export default function SignUp() {
             label="Surname"
             name="Surname"
           />
+          
           <FormControl component="fieldset">
          <FormLabel component="legend">Gender</FormLabel>
           <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-             <FormControlLabel value="female" control={<Radio />} label="Female" />
+                <FormControlLabel value="female" control={<Radio />} label="Female" />
                 <FormControlLabel value="male" control={<Radio />} label="Male" />
                 <FormControlLabel value="other" control={<Radio />} label="Other" />
-                <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" />
           </RadioGroup>
           </FormControl>
+           
           <TextField
             variant="outlined"
             margin="normal"
@@ -153,12 +167,13 @@ export default function SignUp() {
             color="primary"
             size="large"
             className={classes.submit}
+            
           >
             Submit
           </Button>
           <Grid container>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" onClick={() =>setCount(count +1)}>
                 {"Already registered? Log in!"}
               </Link>
             </Grid>
@@ -170,7 +185,7 @@ export default function SignUp() {
       </Box>
       </Box>
     </Container>
-
+    </div>
     
   );
 }

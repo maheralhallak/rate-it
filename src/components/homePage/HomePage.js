@@ -9,8 +9,6 @@ export default class HomePage extends Component {
     
   render() {
     
-
-    
     var lr = <section className="presentation" id="presentation">
     <div className="introduction">
       <div className="intro-text">

@@ -3,9 +3,9 @@ import React from "react";
 import "./App.css";
 
 
-import SignIn from './components/signin/Signin'
-import SignUp from './components/register/Register'
-import HomePage from './components/homePage/HomePage'
+import SignIn from './components/Auth/Signin'
+import SignUp from './components/Auth/Register'
+/* import HomePage from './components/homePage/HomePage.js' */
 
 
 function App() {
@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App">
 
-      <HomePage />
+      {/* <HomePage /> */} 
 
-      {/* <SignIn />
-      <SignUp /> */} 
+      {/* <SignIn /> 
+      <SignUp />  */}
     </div>
   );
 }
