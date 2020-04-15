@@ -21,13 +21,6 @@ export default class HomePage extends Component {
           </div>{" "}
           <br />
           <div className="wrapper">
-            <script
-              type="text/javascript"
-              id="hs-script-loader"
-              async
-              defer
-              src="//js.hs-scripts.com/7502045.js"
-            ></script>
             <a className="btn1" href="#">
               <span></span>
             </a>
