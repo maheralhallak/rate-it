@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.scss";
 
-import SignIn from "./components/signin/Signin";
-import SignUp from "./components/register/Register";
+//import SignIn from "./components/signin/Signin";
+//import SignUp from "./components/register/Register";
 import HomePage from "./components/homePage/HomePage";
 
 function App() {

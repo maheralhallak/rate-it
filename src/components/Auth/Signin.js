@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+/* import Link from '@material-ui/core/Link';  */
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+
+import axios from 'axios';
+import {Link , Redirect} from 'react-router-dom';
 
 
 function Copyright() {
@@ -59,21 +59,42 @@ const defaultProps = {
   marginTop:8,
   left:0,
   boxShadow: '10px 10px 40px #222831',
-  style: { width: '80vh', height: '50wh' },
+  style: { width: '50vh', height: '50wh' },
 };
-
-
-
-   
-
-export default function SignUp() {
+export default
+function SignIn() {
   const classes = useStyles();
   
-  const [value, setValue] = React.useState('female');
-  
-  const handleChange = event => {
-    setValue(event.target.value);
+  const [stateSignin, setStateSigin] = useState(false);
+  const [wrongCredential, setWrongCredential] = useState(false);
+
+  let registerHandler = (e) => {
+    e.preventDefault();
+    let email = e.target.email.value;
+    let  pass = e.target.password.value;
+
+    axios.post('/users/login', {
+        email,
+        pass
+    } ).then(function (response) {
+      console.log(response);
+      if (response.data.token) {
+        localStorage.setItem('token',response.data.token);
+        setStateSigin(true);
+      }else {
+        localStorage.setItem('token','');
+        setWrongCredential(true);
+      }
+    })
+    .catch(function (error){
+      console.log(error);
+      setWrongCredential(true)
+      
+    })
   }
+  if (stateSignin) {
+    return <Redirect to='/' />
+  } else {
   return (
     
     <Container {...defaultProps} component="main" maxWidth="xl" >
@@ -85,35 +106,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Log in
         </Typography>
-        <form className={classes.form} noValidate>
-        <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="name"
-            label="First Name"
-            name="first name"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="name"
-            label="Surname"
-            name="Surname"
-          />
-          <FormControl component="fieldset">
-         <FormLabel component="legend">Gender</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-             <FormControlLabel value="female" control={<Radio />} label="Female" />
-                <FormControlLabel value="male" control={<Radio />} label="Male" />
-                <FormControlLabel value="other" control={<Radio />} label="Other" />
-                <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" />
-          </RadioGroup>
-          </FormControl>
+        <form className={classes.form} noValidate onSubmit={registerHandler}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -123,6 +116,7 @@ export default function SignUp() {
             label="Email Address"
             name="email"
             autoComplete="email"
+            autoFocus
           />
           <TextField
             variant="outlined"
@@ -133,19 +127,12 @@ export default function SignUp() {
             label="Password"
             type="password"
             id="password"
+            autoComplete="current-password"
           />
-
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Retype Password"
-            type="password"
-            id="password"
+          <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="Remember me"
           />
-          
           <Button
             type="submit"
             fullWidth
@@ -154,12 +141,17 @@ export default function SignUp() {
             size="large"
             className={classes.submit}
           >
-            Submit
+            Log In
           </Button>
           <Grid container>
+            <Grid item xs>
+              <Link href="#" variant="body2">
+                Forgot password?
+              </Link>
+            </Grid>
             <Grid item>
               <Link href="#" variant="body2">
-                {"Already registered? Log in!"}
+                {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
@@ -173,4 +165,5 @@ export default function SignUp() {
 
     
   );
+}
 }
