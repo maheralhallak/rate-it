@@ -2,6 +2,97 @@ import React, { Component } from "react";
 import "./homePage.scss";
 import mainpic13 from "./assist/mainpic13.svg";
 import stars from "./assist/3.png";
+import "../contact/Popup";
+import Box from "@material-ui/core/Box";
+import Popover from "@material-ui/core/Popover";
+import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
+import { makeStyles } from "@material-ui/core/styles";
+import Input from "@material-ui/core/TextField";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+
+/* Contact popup */
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+      width: "25ch",
+    },
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    "& .row": {
+      textAlign: "right",
+      width: `calc( 100% - ${theme.spacing(1) * 2}px )`,
+    },
+    "& button": {
+      display: "inline",
+    },
+  },
+}));
+function Inputs() {
+  const classes = useStyles();
+
+  return (
+    <form className={classes.root} noValidate autoComplete="off">
+      <Input
+        label="Your name ..."
+        helperText="* required"
+        inputProps={{ "aria-label": "description" }}
+      />
+      <Input
+        label="Your last name ..."
+        helperText="* required"
+        inputProps={{ "aria-label": "description" }}
+      />
+      <br />
+      <Input
+        helperText="* required"
+        inputProps={{ "label-full-width": "email" }}
+        label="Your Email ..."
+      />
+      <Input
+        helperText="* required"
+        inputProps={{ "label-full-width": "email" }}
+        label="Confirm your Email ..."
+      />
+      <div className={classes.root}>
+        <FormControl variant="outlined" className={classes.formControl}>
+          <InputLabel id="demo-simple-select-outlined-label">About</InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            label="About"
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={1}>request</MenuItem>
+            <MenuItem value={2}>complaint</MenuItem>
+            <MenuItem value={3}>none of the above</MenuItem>
+          </Select>
+        </FormControl>
+        <br />
+        <TextField
+          id="standard-textarea"
+          label="Your text..."
+          placeholder="Your text..."
+          multiline
+        />
+      </div>
+      <div className="row">
+        <Button variant="contained" color="primary" className={classes.button}>
+          Send
+        </Button>
+      </div>
+    </form>
+  );
+}
 
 export default class HomePage extends Component {
   render() {
@@ -21,9 +112,35 @@ export default class HomePage extends Component {
           </div>{" "}
           <br />
           <div className="wrapper">
-            <a className="btn1" href="#">
-              <span></span>
-            </a>
+            <PopupState variant="popover" popupId="demo-popup-popover">
+              {(popupState) => (
+                <div>
+                  <a
+                    className="btn1"
+                    variant="contained"
+                    {...bindTrigger(popupState)}
+                    href="#"
+                  >
+                    <span></span>
+                  </a>
+                  <Popover
+                    {...bindPopover(popupState)}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    transformOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                  >
+                    <Box p={2}>
+                      <Inputs></Inputs>
+                    </Box>
+                  </Popover>
+                </div>
+              )}
+            </PopupState>
           </div>
         </div>
 
