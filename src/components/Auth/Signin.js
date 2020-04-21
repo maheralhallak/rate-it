@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+/* import Link from '@material-ui/core/Link';  */
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+
+import axios from 'axios';
+import {Link , Redirect} from 'react-router-dom';
 
 
 function Copyright() {
@@ -58,10 +61,40 @@ const defaultProps = {
   boxShadow: '10px 10px 40px #222831',
   style: { width: '50vh', height: '50wh' },
 };
-
-export default function SignIn() {
+export default
+function SignIn() {
   const classes = useStyles();
   
+  const [stateSignin, setStateSigin] = useState(false);
+  const [wrongCredential, setWrongCredential] = useState(false);
+
+  let registerHandler = (e) => {
+    e.preventDefault();
+    let email = e.target.email.value;
+    let  pass = e.target.password.value;
+
+    axios.post('/users/login', {
+        email,
+        pass
+    } ).then(function (response) {
+      console.log(response);
+      if (response.data.token) {
+        localStorage.setItem('token',response.data.token);
+        setStateSigin(true);
+      }else {
+        localStorage.setItem('token','');
+        setWrongCredential(true);
+      }
+    })
+    .catch(function (error){
+      console.log(error);
+      setWrongCredential(true)
+      
+    })
+  }
+  if (stateSignin) {
+    return <Redirect to='/' />
+  } else {
   return (
     
     <Container {...defaultProps} component="main" maxWidth="xl" >
@@ -73,7 +106,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Log in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={registerHandler}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -132,4 +165,5 @@ export default function SignIn() {
 
     
   );
+}
 }

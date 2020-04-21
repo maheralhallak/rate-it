@@ -1,9 +1,12 @@
 import React,{useState , useEffect} from 'react';
+
+
+// MateialUi part starts here //
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';  // make sure if you can replace this one with DOM Link
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -15,6 +18,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
+// MaterialUi part ends here //
+
+// Imported Axios to have 2 way connection between frontend and backend
+import axios from 'axios';
+import  { Redirect, Link } from 'react-router-dom'
 
 function Copyright() {
   return (
@@ -73,20 +81,54 @@ const defaultProps = {
    
 
 export default function SignUp() {
-
-  const [count ,setCount]= useState(0)
-  useEffect(() =>{
-    document.title= `you have clicked ${count} times `;
-  });
+  
 
   const classes = useStyles();
   
   const [value, setValue] = React.useState('');
   
   const handleChange = event => {
-    setValue(event.target.value);
-  }
 
+    setValue(event.target.value);
+    console.log(event.target.value);
+    
+  }
+  const registerHandler = (e) =>{
+   e.preventDefault();
+    //fName, lName, gender, email, pass
+     let fName  = e.target.firstName.value,
+         lName  = e.target.surName.value,
+         gender = value,
+         email  = e.target.email.value,
+         pass   = e.target.password.value;
+
+      let payLoad = {
+      fName,
+      lName,
+      gender,
+      email,
+      pass 
+    };
+    console.log(payLoad);
+    
+    axios.post('/users/register',
+    {
+      ...payLoad  
+    }
+    ).then((result,reject)=>{
+      if (reject) {
+        console.log(reject);
+      } else {
+        if(result.status == 'success'){
+          //redirect login
+        }else{
+          //alert message
+          console.log('somthing went wrong')
+        }
+      }
+    }).catch(err=>{throw err})
+  }
+    //express bcrypt jwt 
   return (
     <div className="parent">
     <Container component="main" maxWidth="xl" >
@@ -98,7 +140,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
          Sign Up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit = {(e)=>registerHandler(e)}>
         <TextField
             variant="outlined"
             margin="normal"
@@ -106,7 +148,7 @@ export default function SignUp() {
             fullWidth
             id="name"
             label="First Name"
-            name="first name"
+            name="firstName"
             autoFocus
           />
           <TextField
@@ -116,12 +158,12 @@ export default function SignUp() {
             fullWidth
             id="name"
             label="Surname"
-            name="Surname"
+            name="surName"
           />
           
           <FormControl component="fieldset">
          <FormLabel component="legend">Gender</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={(event)=>handleChange(event)}>
                 <FormControlLabel value="female" control={<Radio />} label="Female" />
                 <FormControlLabel value="male" control={<Radio />} label="Male" />
                 <FormControlLabel value="other" control={<Radio />} label="Other" />
@@ -154,10 +196,10 @@ export default function SignUp() {
             margin="normal"
             required
             fullWidth
-            name="password"
+            name="sec-pass"
             label="Retype Password"
             type="password"
-            id="password"
+            id="sec-pass"
           />
           
           <Button
@@ -167,13 +209,13 @@ export default function SignUp() {
             color="primary"
             size="large"
             className={classes.submit}
-            
+
           >
             Submit
           </Button>
           <Grid container>
             <Grid item>
-              <Link href="#" variant="body2" onClick={() =>setCount(count +1)}>
+              <Link href="#" variant="body2">
                 {"Already registered? Log in!"}
               </Link>
             </Grid>
