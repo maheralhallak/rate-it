@@ -10,26 +10,12 @@ import Register from './components/Auth/Register'
 
 const routing = (
   <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">homePage</Link>
-        </li>
-        <li>
-          <Link to="/signin">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Contact</Link>
-        </li>
-      </ul>
-      <hr />
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/signin" component={SignIn} />
         <Route path="/register" component={Register} />
         <Route component={"Notfound"} />
       </Switch>
-    </div>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
