@@ -1,0 +1,65 @@
+body {
+	margin-top: 10px;
+}
+.product-out {
+	padding: 20px 0px;
+}
+.img2 {
+	width: 800px;
+	height: 550px;
+	border-radius: 8px;
+	opacity: 0.8;
+	margin: 10px 0px 10px 60px;
+	box-shadow: 5px 6px 9px 5px rgb(73, 73, 73);
+}
+.img2:hover {
+	opacity: 1;
+	box-shadow: 5px 6px 9px 5px rgb(87, 144, 155);
+}
+.text2 {
+	box-sizing: border-box;
+	margin: 10px 0px 0px 180px;
+	padding: 0 0 10px 0;
+	text-align: center;
+	border: 1px solid rgb(184, 180, 180);
+	border-radius: 8px;
+	background: rgb(223, 219, 219);
+}
+.h1 {
+	color: red;
+	font-size: 58px;
+}
+.icon1,
+.icon2,
+.icon3 {
+	margin-top: 5px;
+}
+.text-rating {
+	color: rgb(206, 96, 32);
+	font-weight: 900;
+}
+.text-product {
+	color: rgb(84, 167, 59);
+	font-weight: 900;
+}
+.btn {
+	margin-top: 30px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 28px;
+	background: #3498db;
+}
+.btn:hover {
+	background: #e67e22;
+}
+.form-group {
+	margin-left: auto;
+	margin-top: 50px;
+	margin-right: 30px;
+}
+textarea {
+	width: 550px !important;
+	height: 250px !important;
+	resize: none;
+}
