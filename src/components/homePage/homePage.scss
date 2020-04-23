@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 
@@ -13,6 +16,7 @@
 }
 
 .presentation {
+  font-family: "Baloo 2", cursive;
   display: flex;
   width: 90%;
   margin: auto;
@@ -45,7 +49,7 @@
 }
 
 /* Button */
-a {
+.btn1 {
   font-family: "Baloo 2", cursive;
   border: none;
   display: block;
@@ -61,43 +65,44 @@ a {
   transition: all 0.8s;
 }
 
-a span {
+.btn1 a span {
   position: relative;
   z-index: 2;
   font-family: "Baloo 2", cursive;
 }
 
-a:after {
+.btn1 :after {
   font-family: "Baloo 2", cursive;
   border: none;
   position: absolute;
-  content: "";
+  content: "CONTACT";
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
-  background: #e1b738;
+  background: #F7B73D;
   transition: all 0.35s;
 }
 
-a:hover {
+.btn1 a :hover {
   color: #36881c;
 }
 
-a:hover:after {
+.btn1 :hover:after {
   width: 100%;
 }
 
 /* End button  */
+
 .cover {
   flex: 2;
   display: flex;
   justify-content: center;
-  height: 70vh;
+  height: 70%;
 }
 
 .cover img {
-  padding-top: 400px;
+  padding-top: 200px;
   height: 100%;
   /* if you have PNG picture you can add a shadow to it by using the filter. */
   filter: drop-shadow(0px 10px 6px rgb(219, 151, 4));
@@ -105,21 +110,21 @@ a:hover:after {
 }
 
 .big-star {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
   height: 80%;
 }
 
 .mid-icon {
-  position: absolute;
+  position: fixed;
   top: 40%;
   right: 53%;
   z-index: -1;
   height: 60%;
-  opacity: 0.2;
+  opacity: 0.3;
   width: 50%;
   height: 50%;
 }
@@ -131,7 +136,7 @@ a:hover:after {
   }
 
   100% {
-    opacity: 0.7;
+    opacity: 0.8;
     transform: translateY(0px);
   }
 }
@@ -167,15 +172,10 @@ a:hover:after {
 
 /* Animation */
 
-html,
-html {
-  height: 100%;
-  display: flex;
-}
-
 body {
   margin: auto;
-  overflow: hidden;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 #text {
@@ -264,4 +264,101 @@ body {
     visibility: visible;
     transform: skewY(0deg) scale(1);
   }
+}
+
+/* Scroll button */
+
+#section05 {
+  position: bottom;
+  width: 10%;
+  height: 10%;
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: darkgreen;
+  letter-spacing: .3em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+#section05 a:hover {
+  opacity: .5;
+}
+
+#section05 a {
+  padding-top: 70px;
+}
+
+#section05 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+/* End scroll button */
+.secondPara1 {
+  background-color: whitesmoke;
+  padding-left: 5%;
+  padding-top: 15%;
+  display: flex;
+  min-height: 80vh;
+  margin-top: 5px;
+
+}
+
+.secondPara {
+  line-height: 1cm;
+  color: #36881c;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 900;
 }

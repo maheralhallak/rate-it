@@ -1,0 +1,16 @@
+#navibar {
+
+    background-color: rgb(96, 214, 96);
+}
+
+#searching {
+
+    background-color: #28a745;
+}
+
+#inpt {
+width: 150px;
+height: 37px;
+border-radius: 6px;
+
+}

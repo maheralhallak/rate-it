@@ -12,21 +12,7 @@ import Product from './components/cards/Product';
 
 const routing = (
   <Router>
-    <div>
-      <ul className="indexUl">
-        <li>
-          <Link to="/">homePage</Link>
-        </li>
-        <li>
-          <Link to="/signup">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Contact</Link>
-        </li>
-        <li>
-          <Link to="/brands">Brands</Link>
-        </li>
-      </ul>
+
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/signin" component={SignIn} />
@@ -35,7 +21,6 @@ const routing = (
         <Route path="/product/:id" component={Product} />
         {/* <Route component={"Notfound"} /> */}
       </Switch>
-    </div>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
