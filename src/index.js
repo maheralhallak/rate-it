@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import {Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
-
+import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import SignIn from './components/Auth/Signin'
 import Register from './components/Auth/Register'
+import Card from './components/cards/card';
+import Product from './components/cards/Product';
 
 const routing = (
   <Router>
     <div>
-      <ul>
+      <ul className="indexUl">
         <li>
           <Link to="/">homePage</Link>
         </li>
@@ -21,13 +23,17 @@ const routing = (
         <li>
           <Link to="/register">Contact</Link>
         </li>
+        <li>
+          <Link to="/brands">Brands</Link>
+        </li>
       </ul>
-      <hr />
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/signin" component={SignIn} />
         <Route path="/register" component={Register} />
-        <Route component={"Notfound"} />
+        <Route exact path="/brands" component={Card} />
+        <Route path="/product/:id" component={Product} />
+        {/* <Route component={"Notfound"} /> */}
       </Switch>
     </div>
   </Router>
