@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '5',
+    padding: '5'
     
   },
   avatar: {
@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.primary,
   },
   form: {
-    width: '80%', // Fix IE 11 issue.
-    marginTop: theme.spacing(0),
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1)
   },
   submit: {
     margin: theme.spacing(3, 0, 1),
@@ -73,36 +73,32 @@ const defaultProps = {
   marginTop:5,
   left:0,
   boxShadow: '10px 10px 40px #222831',
-  style: { width: '100%', height: '100%' },
+  style: { width: '50%',
+          position : 'relative',
+          left: '50%',
+          transform: 'translate(-50%)' },
 };
 
 
 
-   
-
 export default function SignUp() {
-  
-
   const classes = useStyles();
-  
-  const [value, setValue] = React.useState('');
-  
+  const [value, setValue] = useState('');
   const handleChange = event => {
 
     setValue(event.target.value);
     console.log(event.target.value);
-    
   }
   const registerHandler = (e) =>{
    e.preventDefault();
     //fName, lName, gender, email, pass
-     let fName  = e.target.firstName.value,
-         lName  = e.target.surName.value,
-         gender = value,
-         email  = e.target.email.value,
-         pass   = e.target.password.value;
-
-      let payLoad = {
+  let fName  = e.target.firstName.value,
+      lName  = e.target.surName.value,
+      gender = value,
+      email  = e.target.email.value,
+      pass   = e.target.password.value;
+      
+  let payLoad = {
       fName,
       lName,
       gender,
@@ -110,8 +106,8 @@ export default function SignUp() {
       pass 
     };
     console.log(payLoad);
-    
-    axios.post('/users/register',
+     
+    axios.post("/users/register",
     {
       ...payLoad  
     }

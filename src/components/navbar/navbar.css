@@ -1,6 +1,6 @@
 #navibar {
 
-    background-color: rgb(96, 214, 96);
+    background-color: rgba(96, 214, 96, 0.358);
 }
 
 #searching {
@@ -13,4 +13,4 @@ width: 150px;
 height: 37px;
 border-radius: 6px;
 
-}
+} 
