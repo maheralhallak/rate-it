@@ -7,7 +7,7 @@ import './navbar.css'
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light" id="navibar">
-      <a className="navbar-brand ml-5" href="#">
+      <a className="navbar-brand ml-3" href="http://www.google.com" target="_blank">
         <img src={logo} alt="logo" style={{ width: '50px' }} />
       </a>
       <button
@@ -20,30 +20,30 @@ function Navbar() {
         aria-label="Toggle navigation"
       >
         <span>
-          <i className="fas fa-bars" style={{ color: '#fff' }} />
+          <i className="fa fa-bars" style={{ color: '#fff' }} />
         </span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
-          <li className="nav-item active">
-            <Link className="nav-link text-dark text-uppercase ml-5" to="/">
+          <li className="nav-item active my-0">
+            <Link className="nav-link text-dark text-uppercase ml-3" to="/">
               Home&nbsp;
-              <i className="fas fa-home" />
+              <i className="fa fa-home" />
               <span className="sr-only">(current)</span>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item my-0">
             <Link
-              className="nav-link text-dark text-uppercase ml-5"
+              className="nav-link text-dark text-uppercase ml-3"
               to="/news"
             >
               reviews
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item my-0">
             <Link
-              className="nav-link text-dark text-uppercase ml-5"
+              className="nav-link text-dark text-uppercase ml-3"
               to="/contacts"
             >
               contact us
@@ -52,10 +52,13 @@ function Navbar() {
         </ul>
         <form className="form-inline my-2 my-lg-0">
 
-        <input type="text" id="inpt" placeholder="Search.." name="search"/>&nbsp;
-  <button type="submit" id="searching" class="btn btn-info"><i class="fa fa-search"></i></button>&nbsp;
-  <button type="button" class="btn btn-success"> SIGNUP </button>&nbsp;      
-   <button type="button" class="btn btn-success"> SIGNIN </button>
+        <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&nbsp; 
+  
+        <button type="button" class="btn btn-outline-success my-2 mr-sm-2"> SIGNUP </button>&nbsp;      
+        <button type="button" class="btn btn-outline-success my-2 mr-sm-2"> SIGNIN </button>
+        </form>
         </form>
       </div>
     </nav>
