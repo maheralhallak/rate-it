@@ -1,5 +1,11 @@
 import React from "react";
-import "./App.scss";
+import "./App.css";
+
+
+// import SignIn from './components/Auth/Signin'
+// import SignUp from './components/Auth/Register'
+//import HomePage from './components/homePage/HomePage.js'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import SignIn from "./components/signin/Signin";
