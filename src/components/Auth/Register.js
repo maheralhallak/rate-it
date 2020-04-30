@@ -52,15 +52,19 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(0)
   },
   submit: {
-    margin: theme.spacing(3, 0, 1),
+    margin: theme.spacing(2, 0, 1),
     
   },
   parent:{
     display: 'flex',
     alignItems:'center'
+  },
+  gender:{
+    display:'flex',
+    flexDirection:'row',
   }
   
 }));
@@ -69,14 +73,13 @@ const defaultProps = {
   bgcolor: '#EEEE',
   m: 1,
   border: 0,
-  margin: 0,
-  marginTop:5,
+  margin: 5,
   left:0,
   boxShadow: '10px 10px 40px #222831',
   style: { width: '50%',
           position : 'relative',
-          left: '50%',
-          transform: 'translate(-50%)' },
+           left: '50%',
+          transform: 'translate(-52%)'  },
 };
 
 
@@ -157,9 +160,9 @@ export default function SignUp() {
             name="surName"
           />
           
-          <FormControl component="fieldset">
+          <FormControl component="fieldset" >
          <FormLabel component="legend">Gender</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={(event)=>handleChange(event)}>
+          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={(event)=>handleChange(event)} className={classes.gender}>
                 <FormControlLabel value="female" control={<Radio />} label="Female" />
                 <FormControlLabel value="male" control={<Radio />} label="Male" />
                 <FormControlLabel value="other" control={<Radio />} label="Other" />

@@ -161,37 +161,45 @@ export default class HomePage extends Component {
     var see = (
       <section className="secondPara1" id="secondParagraph">
         <div className="secondPara">
+         <p style={{color:'black'}}>Consumer review :</p>
           <p>
-            Consumer review sites have been one of the Internet’s most
+             sites have been one of the Internet’s most
             persistent and valuable resources since the very beginning.
           </p>
+          <hr></hr>
           <p>
             The website allows consumers to review brands and then alerts brands
             to the feedback they’ve received.
           </p>
+          <hr></hr>
           <p>
             Consumers can post their Good or Bad experiences about almost
             anything known as reviews at rate-it.
           </p>
+          <hr></hr>
           <p>
             Com and associated brands (If Registered) will be notified instantly
             about the review which helps quickly resolve consumer complaints.
           </p>
+          <hr></hr>
           <p>
             As a Brand, on rate-it.com you can easily connect with your
             consumers and help them if needed or say thanks for their good
             review.
           </p>
+          <hr></hr>
           <p>
             All this shows to your potential buyers and they know they will get
             top notch customer service if they buy from you.
           </p>
+          <hr></hr>
           <p>
             The key to this site’s service is the fact that while reviews and
             brand responses are public, each review is a one-on-one
             correspondence—no third-parties or trolls can influence visitor
             opinion.
           </p>
+          <hr></hr>
         </div>
       </section>
     );

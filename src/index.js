@@ -6,21 +6,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import SignIn from './components/Auth/Signin'
-import Register from './components/Auth/Register'
+import Register from './components/Auth/Register';
 import Card from './components/cards/card';
 import Product from './components/cards/Product';
-
+import NavBar from './components/navbar/NavBar';
+import HomePage from "./components/homePage/HomePage";
+import Footer from './components/Footer/Footer' 
 const routing = (
   <Router>
-
+      <NavBar/>  
+      
       <Switch>
+        
         <Route exact path="/" component={App} />
         <Route path="/signin" component={SignIn} />
         <Route path="/register" component={Register} />
+        <Route path="/homepage" component={HomePage} />
         <Route exact path="/brands" component={Card} />
         <Route path="/product/:id" component={Product} />
         {/* <Route component={"Notfound"} /> */}
+       
       </Switch>
+      <Footer />
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
