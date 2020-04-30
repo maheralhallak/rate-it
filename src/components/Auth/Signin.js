@@ -30,11 +30,16 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root:{
+    display:'flex',
+    justifyContent:'center',
+  },
   paper: {
     marginTop: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent:'center'
   },
   avatar: {
     margin: theme.spacing(0),
@@ -43,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(0),
+    display:'flex',
+    justifyContent:'center',
+    flexDirection:'column'
+
   },
   submit: {
     margin: theme.spacing(3, 0, 1),
@@ -55,11 +64,12 @@ const defaultProps = {
   bgcolor: '#EEEE',
   m: 1,
   border: 0,
-  margin: 0,
-  marginTop:8,
+  margin: 5,
+
   left:0,
   boxShadow: '10px 10px 40px #222831',
-  style: { width: '50vh', height: '50wh' },
+  style: { width: '50%',
+          margin:'80wh'  },
 };
 export default
 function SignIn() {
@@ -97,7 +107,7 @@ function SignIn() {
   } else {
   return (
     
-    <Container {...defaultProps} component="main" maxWidth="xl" >
+    <Container {...defaultProps} component="main" maxWidth="xl" className={classes.root} >
       <Box padding={2} {...defaultProps}>
       <CssBaseline />
       <div className={classes.paper}>

@@ -346,13 +346,17 @@ body {
 
 
 .secondPara1 {
-  background-color: rgba(245, 245, 245, 0.338);
-  padding-left: 5%;
-  padding-top: 15%;
+  background-color: rgba(215, 211, 211, 0.568);
+  
+  padding: 15px;
+
   display: flex;
   min-height: 80vh;
-  margin-top: 5px;
+  margin: 100px 300px;
 
+  box-shadow: 10px 10px 5px rgba(28, 27, 27, 0.568);
+  border-radius: 80px;
+  justify-content: center;
 }
 
 .secondPara {
@@ -361,4 +365,6 @@ body {
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: 900;
+  text-align: center;
+  width: 100vh;
 }
