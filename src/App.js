@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 
 // import SignIn from './components/Auth/Signin'
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-     {/*  <HomePage /> */}
+      {/*  <HomePage /> */}
       {/* <SignIn />
       <SignUp /> */}
     </div>
