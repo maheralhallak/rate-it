@@ -15,6 +15,7 @@ body {
 	overflow: hidden;
 	margin: 0 10px 0 70px;
 	box-shadow: 1px 1px 9px 1px #888;
+	z-index: 0;
 }
 input {
 	background: rgb(238, 243, 243);

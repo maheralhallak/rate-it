@@ -15,7 +15,7 @@ import Navbar from './components/navbar/NavBar'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       {/*  <HomePage /> */}
       {/* <SignIn />
       <SignUp /> */}

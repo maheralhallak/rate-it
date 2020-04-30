@@ -11,23 +11,23 @@ import Card from './components/cards/card';
 import Product from './components/cards/Product';
 import NavBar from './components/navbar/NavBar';
 import HomePage from "./components/homePage/HomePage";
-import Footer from './components/Footer/Footer' 
+import Footer from './components/footer/Footer'
 const routing = (
   <Router>
-      <NavBar/>  
-      
-      <Switch>
-        
-        <Route exact path="/" component={App} />
-        <Route path="/signin" component={SignIn} />
-        <Route path="/register" component={Register} />
-        <Route path="/homepage" component={HomePage} />
-        <Route exact path="/brands" component={Card} />
-        <Route path="/product/:id" component={Product} />
-        {/* <Route component={"Notfound"} /> */}
-       
-      </Switch>
-      <Footer />
+
+    <NavBar />
+    <Switch>
+
+      {/* <Route exact path="/" component={App} /> */}
+      <Route exact path="/" component={HomePage} />
+      <Route path="/brands" component={Card} />
+      <Route path="/signin" component={SignIn} />
+      <Route path="/register" component={Register} />
+      <Route path="/product/:id" component={Product} />
+      {/* <Route component={"Notfound"} /> */}
+
+    </Switch>
+    <Footer />
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))

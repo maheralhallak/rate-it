@@ -31,7 +31,7 @@ export default function Card() {
   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
   console.log(indexOfFirstItem, indexOfLastItem, currentItems)
   const renderProducts = currentItems.map((product, index) => {
-    return (<div key={product.name} className="col-md-6 mt-2" >
+    return (<div key={product.name} className="col-md-6 mt-5" >
       <div className="card" style={{ margin: "0 5px" }}>
         <container>
           <Row className="show-grid">

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import { Button, Navbar, Nav  } from 'react-bootstrap';
+import { Button, Navbar, Nav } from 'react-bootstrap';
 import './navbar.css'
 import { green } from '@material-ui/core/colors';
 export class NavBar extends Component {
   render() {
     return (
       <div >
-        <Navbar bg="light" variant="primary" className="navi">
-         
-          <Nav className="mr-auto">
-            <Nav.Link className="link text-weight-bold" href="/homepage"> Home</Nav.Link>
-            <Nav.Link className="link" href="/brands">Features</Nav.Link>
+        <Navbar bg="light" variant="primary" className="navi  sticky-top">
+
+          <Nav className="mr-auto sticky-top">
+            <Nav.Link className="link text-weight-bold" href="/"> Home</Nav.Link>
+            <Nav.Link className="link" href="/brands">Brands</Nav.Link>
             <Nav.Link className="link" href="/signin">Signin</Nav.Link>
             <Nav.Link className="link" href="/register">Register</Nav.Link>
             <Nav.Link className="link" href="/pricing">Pricing</Nav.Link>

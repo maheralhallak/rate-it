@@ -1,370 +1,361 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 
 .cart {
-  flex: 1;
-  justify-content: flex-end;
+	flex: 1;
+	justify-content: flex-end;
 }
 
 .presentation {
-  font-family: "Baloo 2", cursive;
-  display: flex;
-  width: 90%;
-  margin: auto;
-  min-height: 80vh;
-  align-items: center;
+	font-family: "Baloo 2", cursive;
+	display: flex;
+	width: 90%;
+	margin: 100px auto;
+	min-height: 80vh;
+	align-items: center;
 }
 
 .introduction {
-  flex: 1;
+	flex: 1;
 }
 
 .intro-text h1 {
-  font-size: 48px;
-  font-weight: 500;
-  background: linear-gradient(to right, #1d6109, #c36914);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	font-size: 48px;
+	font-weight: 500;
+	background: linear-gradient(to right, #1d6109, #c36914);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .intro-text p {
-  margin-top: 5px;
-  font-size: 24px;
-  font-weight: 900;
-  color: #36881c;
+	margin-top: 5px;
+	font-size: 24px;
+	font-weight: 900;
+	color: #36881c;
 }
 
 .example {
-  padding: 50px 0px 0px 0px;
-  display: flex;
+	padding: 50px 0px 0px 0px;
+	display: flex;
 }
 
 /* Button */
 .btn1 {
-  font-family: "Baloo 2", cursive;
-  border: none;
-  display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 22px;
-  text-decoration: none;
-  color: #123b0e;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all 0.8s;
+	font-family: "Baloo 2", cursive;
+	border: none;
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	text-decoration: none;
+	color: #123b0e;
+	letter-spacing: 2px;
+	text-align: center;
+	position: relative;
+	transition: all 0.8s;
 }
 
 .btn1 a span {
-  position: relative;
-  z-index: 2;
-  font-family: "Baloo 2", cursive;
+	position: relative;
+	z-index: 2;
+	font-family: "Baloo 2", cursive;
 }
 
 .btn1 :after {
-  font-family: "Baloo 2", cursive;
-  border: none;
-  position: absolute;
-  content: "CONTACT";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #F7B73D;
-  transition: all 0.35s;
+	font-family: "Baloo 2", cursive;
+	border: none;
+	position: absolute;
+	content: "CONTACT";
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: #f7b73d;
+	transition: all 0.35s;
 }
 
 .btn1 a :hover {
-  color: #36881c;
+	color: #36881c;
 }
 
 .btn1 :hover:after {
-  width: 100%;
+	width: 100%;
 }
 
 /* End button  */
 
 .cover {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  height: 70%;
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	height: 70%;
 }
 
 .cover img {
-  padding-top: 200px;
-  height: 100%;
-  /* if you have PNG picture you can add a shadow to it by using the filter. */
-  filter: drop-shadow(0px 10px 6px rgb(219, 151, 4));
-  animation: drop 2.5s ease;
+	padding-top: 200px;
+	height: 100%;
+	/* if you have PNG picture you can add a shadow to it by using the filter. */
+	filter: drop-shadow(0px 10px 6px rgb(219, 151, 4));
+	animation: drop 2.5s ease;
 }
 
 .big-star {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  z-index: -1;
-  opacity: 0.3;
-  height: 80%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.3;
+	height: 80%;
 }
 
 .mid-icon {
-  position: fixed;
-  top: 40%;
-  right: 53%;
-  z-index: -1;
-  height: 60%;
-  opacity: 0.3;
-  width: 50%;
-  height: 50%;
+	position: fixed;
+	top: 40%;
+	right: 53%;
+	z-index: -1;
+	height: 60%;
+	opacity: 0.3;
+	width: 50%;
+	height: 50%;
 }
 
 @keyframes drop {
-  0% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
 
-  100% {
-    opacity: 0.8;
-    transform: translateY(0px);
-  }
+	100% {
+		opacity: 0.8;
+		transform: translateY(0px);
+	}
 }
 
 /* to make it mobile freindly   */
 @media screen and (max-width: 1024px) {
-  .presentation {
-    flex-direction: cloumn;
-  }
+	.presentation {
+		flex-direction: cloumn;
+	}
 
-  .introduction {
-    margin-top: 5vh;
-    text-align: center;
-  }
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
 
-  .intro-text h1 {
-    font-size: 35px;
-  }
+	.intro-text h1 {
+		font-size: 35px;
+	}
 
-  .introduction p {
-    font-size: 20px;
-  }
+	.introduction p {
+		font-size: 20px;
+	}
 
-  .cover img {
-    height: 70%;
-  }
+	.cover img {
+		height: 70%;
+	}
 
-  .mid-icon,
-  .big-star {
-    opacity: 0.1;
-  }
+	.mid-icon,
+	.big-star {
+		opacity: 0.1;
+	}
 }
 
 /* Animation */
 
 body {
-  margin: auto;
-  overflow: scroll;
-  scroll-behavior: smooth;
+	margin: auto;
+	overflow: scroll;
+	scroll-behavior: smooth;
 }
 
 #text {
-  font-family: "Baloo 2", cursive;
-  font-weight: 800;
-  font-size: 7vw;
-  transform: skewY(0deg);
-  visibility: hidden;
-  color: #123b0e;
-  animation: display 2s cubic-bezier(0.6, 0, 0.15, 1) 3s forwards;
-  position: relative;
+	font-family: "Baloo 2", cursive;
+	font-weight: 800;
+	font-size: 7vw;
+	transform: skewY(0deg);
+	visibility: hidden;
+	color: #123b0e;
+	animation: display 2s cubic-bezier(0.6, 0, 0.15, 1) 3s forwards;
+	position: relative;
 }
 
 #text:before,
 #text:after {
-  content: attr(data-text);
-  visibility: visible;
-  color: yellow;
-  position: absolute;
-  left: 0;
-  display: block;
-  top: auto;
-  bottom: 0;
-  z-index: 3;
+	content: attr(data-text);
+	visibility: visible;
+	color: yellow;
+	position: absolute;
+	left: 0;
+	display: block;
+	top: auto;
+	bottom: 0;
+	z-index: 3;
 }
 
 #text:before {
-  color: rgb(233, 199, 10);
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-  animation: move-left 1.5s cubic-bezier(0.6, 0, 0.15, 1),
-    blur 1s linear 3s forwards;
+	color: rgb(233, 199, 10);
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+	animation: move-left 1.5s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
 
 #text:after {
-  color: rgb(216, 202, 8);
-  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  animation: move-right 2s cubic-bezier(0.6, 0, 0.15, 1),
-    blur 1s linear 3s forwards;
+	color: rgb(216, 202, 8);
+	clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+	animation: move-right 2s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
 
 @keyframes move-left {
-  from {
-    transform: translate(-1000%, -120%);
-  }
+	from {
+		transform: translate(-1000%, -120%);
+	}
 
-  50% {
-    transform: translate(0%, -120%);
-  }
+	50% {
+		transform: translate(0%, -120%);
+	}
 
-  100% {
-    transform: translate(0%, 0%);
-  }
+	100% {
+		transform: translate(0%, 0%);
+	}
 }
 
 @keyframes move-right {
-  from {
-    transform: translate(1000%, 90%);
-  }
+	from {
+		transform: translate(1000%, 90%);
+	}
 
-  50% {
-    transform: translate(0%, 90%);
-  }
+	50% {
+		transform: translate(0%, 90%);
+	}
 
-  100% {
-    transform: translate(0%, 0%);
-  }
+	100% {
+		transform: translate(0%, 0%);
+	}
 }
 
 @keyframes blur {
-  from {
-    opacity: 1;
-  }
+	from {
+		opacity: 1;
+	}
 
-  to {
-    opacity: 0;
-  }
+	to {
+		opacity: 0;
+	}
 }
 
 @keyframes display {
-  from {
-    visibility: hidden;
-    transform: skewY(0deg) scale(0);
-  }
+	from {
+		visibility: hidden;
+		transform: skewY(0deg) scale(0);
+	}
 
-  to {
-    visibility: visible;
-    transform: skewY(0deg) scale(1);
-  }
+	to {
+		visibility: visible;
+		transform: skewY(0deg) scale(1);
+	}
 }
 
 /* Scroll button */
 
 #section05 {
-  position: bottom;
-  width: 10%;
-  height: 10%;
+	position: bottom;
+	width: 10%;
+	height: 10%;
 }
 
 .demo a {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: darkgreen;
-  letter-spacing: .3em;
-  text-decoration: none;
-  transition: opacity .3s;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: darkgreen;
+	letter-spacing: .3em;
+	text-decoration: none;
+	transition: opacity .3s;
 }
 
 #section05 a:hover {
-  opacity: .5;
+	opacity: .5;
 }
 
 #section05 a {
-  padding-top: 70px;
+	padding-top: 70px;
 }
 
 #section05 a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid green;
-  border-bottom: 1px solid green;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb05 1.5s infinite;
-  animation: sdb05 1.5s infinite;
-  box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid green;
+	border-bottom: 1px solid green;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb05 1.5s infinite;
+	animation: sdb05 1.5s infinite;
+	box-sizing: border-box;
 }
 
 @-webkit-keyframes sdb05 {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
 
-  50% {
-    opacity: 1;
-  }
+	50% {
+		opacity: 1;
+	}
 
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
+	100% {
+		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
 }
 
 @keyframes sdb05 {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
 
-  50% {
-    opacity: 1;
-  }
+	50% {
+		opacity: 1;
+	}
 
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
 }
 
-
 .secondPara1 {
-  background-color: rgba(215, 211, 211, 0.568);
-  
-  padding: 15px;
+	background-color: rgba(215, 211, 211, 0.568);
 
-  display: flex;
-  min-height: 80vh;
-  margin: 100px 300px;
+	padding: 15px;
 
-  box-shadow: 10px 10px 5px rgba(28, 27, 27, 0.568);
-  border-radius: 80px;
-  justify-content: center;
+	display: flex;
+	min-height: 80vh;
+	margin: 100px 300px;
+
+	box-shadow: 10px 10px 5px rgba(28, 27, 27, 0.568);
+	border-radius: 80px;
+	justify-content: center;
 }
 
 .secondPara {
-  line-height: 1cm;
-  color: #36881c;
-  font-size: 24px;
-  letter-spacing: 1px;
-  font-weight: 900;
-  text-align: center;
-  width: 100vh;
+	line-height: 1cm;
+	color: #36881c;
+	font-size: 24px;
+	letter-spacing: 1px;
+	font-weight: 900;
+	text-align: center;
+	width: 100vh;
 }
