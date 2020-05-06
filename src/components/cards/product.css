@@ -8,13 +8,12 @@ body {
 	width: 800px;
 	height: 550px;
 	border-radius: 8px;
-	opacity: 0.8;
 	margin: 10px 0px 10px 60px;
 	box-shadow: 5px 6px 9px 5px rgb(73, 73, 73);
 }
 .img2:hover {
-	opacity: 1;
 	box-shadow: 5px 6px 9px 5px rgb(87, 144, 155);
+	filter: grayscale(100%);
 }
 .img3 {
 	width: 50px;
@@ -22,13 +21,15 @@ body {
 }
 .text2 {
 	box-sizing: border-box;
-	position: sticky;
 	margin: 10px 0px 0px 180px;
 	padding: 0 0 10px 0;
 	text-align: center;
 	border: 1px solid rgb(184, 180, 180);
 	border-radius: 8px;
 	background: rgb(223, 219, 219);
+	position: relative;
+	position: sticky;
+	z-index: 0;
 }
 .h1 {
 	color: red;
@@ -60,7 +61,7 @@ body {
 	margin: 0px 0px 25px 350px;
 }
 .product-input {
-	margin: 10px 35px 10px 0px !important;
+	margin: 10px 0px 10px 0px !important;
 	border-bottom: 1px solid #000 !important;
 	background: none;
 	border: none;
@@ -73,7 +74,9 @@ body {
 	border-bottom: 3px solid green !important;
 }
 .p-box {
-	margin: 30px 130px;
+	margin: 30px 0px 30px 160px;
+	padding: 0;
+	display: flex;
 	width: 650px;
 	font-size: 18px;
 	font-family: tahoma;
