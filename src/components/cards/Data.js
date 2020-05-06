@@ -484,11 +484,6 @@ export default {
       speed: 'Too fast', speedText: 'Average Return',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
-    },
-    {
-      productRating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
-        {/* <Typography className="ml-4" component="legend">Rating</Typography> */}
-        <Rating name="customized-1" defaultValue={2} max={5} /></Box>
     }
   ]
 }

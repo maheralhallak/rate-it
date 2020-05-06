@@ -3,36 +3,57 @@ import './product.css';
 import { Link } from 'react-router-dom';
 import data from './Data';
 import User from './user.png'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function Product(props) {
   const [comment, setComment] = useState('');
   const [showComment, setshowComment] = useState([])
-  console.log(props.match.params.id);
+  console.log("id inside product", props.match.params.id);
   // const [data,setData] = React.useState(false);
   // if ( ! data ) fetch(...).then(..).then(data=>setData(data))
 
   let product = data.products.find(
     x => x.id === parseInt(props.match.params.id)
   );
-  const addComment = (e) => {
+  const brandId = props.match.params.id
+  useEffect(() => {
+    axios.post("http://localhost:5000/fetchcomment", brandId).then((data) => {// the incoming data will contain all the comments in the DB as an array
+      if (data) { setshowComment(data) }
+      else { console.log("Data is empty") }
+    }).catch((err) => { console.log(err) })
+  }, [])
+  const addComment = async (e) => {
     e.preventDefault();
-
-    setshowComment(oldArray => [...oldArray, comment])
+    await setshowComment(oldArray => [...oldArray, comment])
     setComment("")
+    axios.post("http://localhost:5000/addcoment", { id: brandId, data: comment })//every comment will go one by one. In the backend, these will be saved to DB as an array
+      .then((data) => {
+        console.log("Comment successfully added to DB", data)
+      }).catch((err) => {
+        console.log(err)
+      })
   }
 
-  const liElement = showComment.map((item) => { return (<li className="commentLi"><img className="img3" src={product.image3} alt="icon" />{item}</li>) })
-  return <div className="mt-1  product-out">
+  const liElement = showComment.map((item) => {
+    return (<li className="commentLi">
+      <img className="img3" src={product.image3} alt="icon" />
+      {item}
+    </li>)
+  })
+
+
+  return <div className="mt-5  product-out">
     <div className="container-fluid">
       <div className="row">
 
-        <div className="mt-1  col-md-12">
+        <div className="mt-5  col-md-12">
 
           <div className="image col-md-7 float-left">
             <img className="img2 one animated zoomIn" src={product.image2} alt="Product" />
           </div>
 
-          <div className="text2 sticky-top col-md-3 float-left animated zoomIn">
+          <div className="text2 col-md-3 sticky-top float-left animated zoomIn">
             <h1 className="h1 two animated fadeInLeft delay-1s">{product.name}</h1>
 
             <div className="image">
@@ -75,6 +96,13 @@ function Product(props) {
     {/*   */}
     <div className="p-box">
       <ul>
+        <div>
+          <img className="img3" src={product.image3} alt="icon" />
+          the window is coming up because my screen dims just like it did when the
+          window popped up. So that's another layer to my problem. I can't even enter
+          into dual display mode anymore because I can't hit the Keep Settings button on
+          the popup window.
+      </div>
         <div>{liElement}</div>
       </ul>
     </div>
