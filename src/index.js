@@ -11,7 +11,9 @@ import Card from './components/cards/card';
 import Product from './components/cards/Product';
 import NavBar from './components/navbar/NavBar';
 import HomePage from "./components/homePage/HomePage";
-import Footer from './components/footer/Footer'
+import Footer from './components/Footer/Footer'
+import HomePage2 from './components/HomePage2/HomePage2'
+
 const routing = (
   <Router>
 
@@ -24,10 +26,11 @@ const routing = (
       <Route path="/signin" component={SignIn} />
       <Route path="/register" component={Register} />
       <Route path="/product/:id" component={Product} />
+      <Route path="/pricing" component={HomePage2} />
       {/* <Route component={"Notfound"} /> */}
 
     </Switch>
-    <Footer />
+   {/*  <Footer /> */}
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))

@@ -1,0 +1,45 @@
+
+.announce-voice{
+    display: flex;
+    flex-direction: row;
+    height: 200vh;
+    background-color: whitesmoke;
+}
+.announce-detail{
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  
+}
+.announce-detail .img {
+    padding: 40px 0;
+    background: url("https://uploads-ssl.webflow.com/5bcb5ee81fb2091a2ec550c7/5c74932ba272b1537a7f2334_support-notes-colour.svg") center center/contain no-repeat;
+    
+    
+}
+.details-h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(37, 121, 3);
+}
+.details-p{
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(82, 34, 7);
+}
+.announce-detail .img3{
+    background: url("https://cdn.pixabay.com/photo/2019/08/05/15/18/not-good-4386247_960_720.png") center center/contain no-repeat;
+    padding: 100px;
+    
+}
+
+.sRow {
+    margin-top: 200px;
+    
+
+}
+.no{
+    color: red;
+}
+.details2-h1{
+    width: 400px;
+    text-align: center;
+}
