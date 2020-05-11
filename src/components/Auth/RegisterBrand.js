@@ -11,11 +11,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
 
 // MaterialUi part ends here //
 
@@ -48,16 +43,28 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0),
     backgroundColor: theme.palette.secondary.primary,
   },
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  input: {
+    display: "none",
+  },
   form: {
-    width: "80%", // Fix IE 11 issue.
+    width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(0),
   },
   submit: {
-    margin: theme.spacing(3, 0, 1),
+    margin: theme.spacing(2, 0, 1),
   },
   parent: {
     display: "flex",
     alignItems: "center",
+  },
+  gender: {
+    display: "flex",
+    flexDirection: "row",
   },
 }));
 
@@ -65,18 +72,40 @@ const defaultProps = {
   bgcolor: "#EEEE",
   m: 1,
   border: 0,
-  margin: 0,
-  marginTop: 5,
+  margin: 5,
   left: 0,
   boxShadow: "10px 10px 40px #222831",
-  style: { width: "100%", height: "100%" },
+  style: {
+    width: "50%",
+    position: "relative",
+    left: "50%",
+    transform: "translate(-52%)",
+  },
 };
 
 export default function SignUp() {
+  const [state, setState] = useState(null);
+
+  const onChangeHandler = (e) => {
+    // Assuming only image
+    //console.log(e.target);
+    var file = e.target.files[0];
+
+    //console.log(file);
+    var reader = new FileReader();
+    var url = reader.readAsDataURL(file);
+
+    reader.onloadend = function (e) {
+      setState({
+        imgSrc: [reader.result],
+      });
+    }.bind(this);
+    console.log(url); // Would see a path?
+    // TODO: concat files
+  };
+
   const classes = useStyles();
-
-  const [value, setValue] = React.useState("");
-
+  const [value, setValue] = useState("");
   const handleChange = (event) => {
     setValue(event.target.value);
     console.log(event.target.value);
@@ -141,45 +170,39 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="name"
-                label="First Name"
-                name="firstName"
+                label="Brands Name"
+                name="brandsName"
                 autoFocus
               />
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="name"
-                label="Surname"
-                name="surName"
+              <input
+                accept="image/*"
+                className={classes.input}
+                id="contained-button-file"
+                multiple
+                type="file"
+                name="user[image]"
+                multiple="false"
+                onChange={onChangeHandler}
               />
-
-              <FormControl component="fieldset">
-                <FormLabel component="legend">Gender</FormLabel>
-                <RadioGroup
-                  aria-label="gender"
-                  name="gender1"
-                  value={value}
-                  onChange={(event) => handleChange(event)}
-                >
-                  <FormControlLabel
-                    value="female"
-                    control={<Radio />}
-                    label="Female"
+              <label
+                htmlFor="contained-button-file"
+                style={{ textAlign: "center", width: "100%" }}
+              >
+                <Button variant="contained" color="primary" component="span">
+                  Upload LOGO
+                </Button>
+                {state ? (
+                  <img
+                    className="previewImg"
+                    src={state.imgSrc}
+                    style={{
+                      maxWidth: "150px",
+                      maxHeight: "150px",
+                      marginLeft: "5%",
+                    }}
                   />
-                  <FormControlLabel
-                    value="male"
-                    control={<Radio />}
-                    label="Male"
-                  />
-                  <FormControlLabel
-                    value="other"
-                    control={<Radio />}
-                    label="Other"
-                  />
-                </RadioGroup>
-              </FormControl>
+                ) : null}
+              </label>
 
               <TextField
                 variant="outlined"
