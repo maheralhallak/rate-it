@@ -16,24 +16,35 @@ function Product(props) {
   let product = data.products.find(
     x => x.id === parseInt(props.match.params.id)
   );
-  const brandId = props.match.params.id
+
+  const brandId = props.match.params.id;
+
   useEffect(() => {
-    axios.post("http://localhost:5000/fetchcomment", brandId).then((data) => {// the incoming data will contain all the comments in the DB as an array
+    axios.post("/comment/",
+     brandId,
+     
+     ).then((data) => {// the incoming data will contain all the comments in the DB as an array
       if (data) { setshowComment(data) }
       else { console.log("Data is empty") }
     }).catch((err) => { console.log(err) })
-  }, [])
-  const addComment = async (e) => {
-    e.preventDefault();
-    await setshowComment(oldArray => [...oldArray, comment])
-    setComment("")
-    axios.post("http://localhost:5000/addcoment", { id: brandId, data: comment })//every comment will go one by one. In the backend, these will be saved to DB as an array
-      .then((data) => {
-        console.log("Comment successfully added to DB", data)
-      }).catch((err) => {
-        console.log(err)
-      })
-  }
+    }, [])
+
+    const addComment = async (e) => {
+      e.preventDefault();
+      await setshowComment(oldArray => [...oldArray, comment])
+      setComment("")
+      axios.post("http://localhost:5000/addcoment",
+      {
+        id: brandId,
+        data: comment
+
+        })//every comment will go one by one. In the backend, these will be saved to DB as an array
+        .then((data) => {
+          console.log("Comment successfully added to DB", data)
+        }).catch((err) => {
+          console.log(err)
+        })
+    }
 
   const liElement = showComment.map((item) => {
     return (<li className="commentLi">
@@ -86,10 +97,9 @@ function Product(props) {
     <div className="input">
       <form onSubmit={addComment}>
         <img className="userImg" src={User} alt="Product" />
-        <input className="product-input" type="text" value={comment} onChange={e => setComment(e.target.value)}
+        <input className="product-input" type="text" value={comment} name="comment" onChange={e => setComment(e.target.value)}
           placeholder=" leave your comments here....." />
         <button className="form-btn" onClick={addComment}>Add Comment</button>
-
       </form>
     </div>
 

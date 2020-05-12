@@ -33,13 +33,23 @@
 
 .sRow {
     margin-top: 200px;
+    background-color: rosybrown;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
     
+   
 
 }
 .no{
     color: red;
 }
+.yes{
+    color: yellow;
+    
+}
 .details2-h1{
     width: 400px;
     text-align: center;
+    font-weight: bold;
 }

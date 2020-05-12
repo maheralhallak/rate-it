@@ -17,11 +17,11 @@ function HomePage2() {
                                     <p class="details-p">Write your complaint, make your voice heard.</p>
                                 </div>
                             </div>
-                            <div class="row sRow">
-                               <div class="col-md-6 mt-5 img3"></div>
-                                <div class="details">
-                                    <h1 class="details2-h1 mt-2">
-                                    Say <span class="no">no!</span>  to the service that does not meet your needs
+                            <div class="row sRow col-md-12">
+                               <div class="col-md-6 img3"></div>
+                                <div class="details col-md-6">
+                                    <h1 class="details2-h1 mt-5">
+                                    Say <span class="no">no!</span>  to the service that does not meet your needs and share your <span class="yes">Experince <br/>&#9733; &#9733; &#9733;  </span> &#9733; &#9733;
                                     </h1>
                                 </div>
                             </div>
