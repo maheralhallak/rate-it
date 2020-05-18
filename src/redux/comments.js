@@ -1,4 +1,4 @@
-import { Provider, connect } from 'react-redux'
+/* import { Provider, connect } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 
 import axios from 'axios'
@@ -37,4 +37,4 @@ export const withComments = connect(
     1: [
       {userName:'anx',text:'blah good stuff'}
     ]
-  }
+  } */

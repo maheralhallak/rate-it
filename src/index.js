@@ -15,12 +15,13 @@ import NavBar from './components/navbar/NavBar';
 //import HomePage from "./components/homePage/HomePage";
 import Footer from './components/Footer/Footer'
 import HomePage2 from './components/HomePage2/HomePage2'
+import BrandSignUp from './components/Auth/RegisterBrand'
 import { Button } from 'react-bootstrap'
 
 import axios from 'axios';
 axios.defaults.headers['x-auth-token'] = localStorage.getItem('token');
 
-const ComponentWithComments = withComments(
+/* const ComponentWithComments = withComments(
   ({id,comments,commentsActions})=> {
     const [text,setText] = React.useState('');
     if ( ! comments[id] ) return <b>Loading...</b>;
@@ -30,16 +31,16 @@ const ComponentWithComments = withComments(
       { comments[id].map( comment => <b>{comment.userName}</b>) }
       </div>;
   }
-);
+); */
 
 const store = createStore(
   combineReducers({
     comments: commentsReducer
   }));
-
+ 
 const routing = (
-  <Provider store={store} >
-    <ComponentWithComments id={1}/>
+  <Provider  store={store}  >
+    {/* <ComponentWithComments id={1}/>  */}
   <Router>
 
     <NavBar />
@@ -50,6 +51,7 @@ const routing = (
       <Route path="/brands" component={Card} />
       <Route path="/signin" component={SignIn} />
       <Route path="/register" component={Register} />
+      <Route path="/Brand-register" component={BrandSignUp} />
       <Route path="/product/:id" component={Product} />
       <Route path="/pricing" component={HomePage2} />
       {/* <Route component={"Notfound"} /> */}

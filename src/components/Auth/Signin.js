@@ -14,7 +14,7 @@ import Container from '@material-ui/core/Container';
 
 import axios from 'axios';
 import {Link , Redirect} from 'react-router-dom';
-
+import './style.css'
 
 function Copyright() {
   return (
@@ -107,7 +107,7 @@ function SignIn() {
     return <Redirect to='/' />
   } else {
   return (
-    
+    <div className="parent">
     <Container {...defaultProps} component="main" maxWidth="xl" className={classes.root} >
       <Box padding={2} {...defaultProps}>
       <CssBaseline />
@@ -161,11 +161,14 @@ function SignIn() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link to="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
+          <Link to="/Brand-register" variant="body1" style={{color:"red", fontSize:"1.4em"}}>
+                {"Register Your Brand here"}
+              </Link>
         </form>
       </div>
       <Box mt={8}>
@@ -173,7 +176,7 @@ function SignIn() {
       </Box>
       </Box>
     </Container>
-
+    </div>
     
   );
 }

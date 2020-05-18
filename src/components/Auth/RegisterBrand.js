@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import {useHistory} from 'react-router-dom';
 // MateialUi part starts here //
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -83,14 +83,14 @@ const defaultProps = {
   },
 };
 
-export default function SignUp() {
+export default function BrandSignUp() {
   const [state, setState] = useState(null);
-
+  const history = useHistory();
   const onChangeHandler = (e) => {
     // Assuming only image
     //console.log(e.target);
     var file = e.target.files[0];
-
+    if (!file) return;
     //console.log(file);
     var reader = new FileReader();
     var url = reader.readAsDataURL(file);
@@ -100,44 +100,47 @@ export default function SignUp() {
         imgSrc: [reader.result],
       });
     }.bind(this);
-    console.log(url); // Would see a path?
+  // Would see a path?
     // TODO: concat files
   };
 
   const classes = useStyles();
-  const [value, setValue] = useState("");
-  const handleChange = (event) => {
-    setValue(event.target.value);
-    console.log(event.target.value);
-  };
+ 
   const registerHandler = (e) => {
     e.preventDefault();
-    //fName, lName, gender, email, pass
-    let fName = e.target.firstName.value,
-      lName = e.target.surName.value,
-      gender = value,
-      email = e.target.email.value,
-      pass = e.target.password.value;
+ 
+     
 
-    let payLoad = {
-      fName,
-      lName,
-      gender,
-      email,
-      pass,
-    };
-    console.log(payLoad);
+    //fName, lName, gender, email, pass
+    let brandName = e.target.brandName.value;
+    let  email = e.target.email.value;
+    let  pass = e.target.password.value;
+    let  logo = e.target.logo.files[0];
+
+
+    const formData = new FormData();
+    formData.append('brandName',brandName);
+    formData.append('email',email);
+    formData.append('pass',pass);
+    formData.append('logo',logo);
+   
+    
 
     axios
-      .post("/users/register", {
-        ...payLoad,
+      .post("/users/b-register", formData,
+      {
+        headers: {
+          'content-type': 'multipart/form-data'
+      }
       })
       .then((result, reject) => {
+        
         if (reject) {
           console.log(reject);
         } else {
-          if (result.status == "success") {
+          if (result.data.status === "success") {
             //redirect login
+            history.push('/')
           } else {
             //alert message
             console.log("somthing went wrong");
@@ -150,8 +153,8 @@ export default function SignUp() {
   };
   //express bcrypt jwt
   return (
-    <div className="parent">
-      <Container component="main" maxWidth="xl">
+    <div className="parent" style={{paddingTop:"12px"}}>
+      <Container component="main" maxWidth="xl" >
         <Box padding={2} {...defaultProps}>
           <CssBaseline />
           <div className={classes.paper}>
@@ -169,9 +172,9 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
-                id="name"
+                id="brandName"
                 label="Brands Name"
-                name="brandsName"
+                name="brandName"
                 autoFocus
               />
               <input
@@ -180,7 +183,7 @@ export default function SignUp() {
                 id="contained-button-file"
                 multiple
                 type="file"
-                name="user[image]"
+                name="logo"
                 multiple="false"
                 onChange={onChangeHandler}
               />
@@ -188,7 +191,7 @@ export default function SignUp() {
                 htmlFor="contained-button-file"
                 style={{ textAlign: "center", width: "100%" }}
               >
-                <Button variant="contained" color="primary" component="span">
+                <Button variant="contained" color="primary"  component="span">
                   Upload LOGO
                 </Button>
                 {state ? (
@@ -248,7 +251,7 @@ export default function SignUp() {
               </Button>
               <Grid container>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link to="/signin" variant="body2">
                     {"Already registered? Log in!"}
                   </Link>
                 </Grid>
