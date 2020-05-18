@@ -1,0 +1,49 @@
+.item-h1 {
+	margin-top: 80px;
+	font-family: serif;
+	text-align: center;
+	color: brown;
+	font-style: italic;
+}
+.item-row {
+	text-align: center;
+	margin: 0px 5px !important;
+	justify-content: space-around;
+}
+.items {
+	margin: 50px 0px;
+	position: relative;
+	background: rgb(181, 185, 204);
+	width: 380px;
+	height: 490px;
+	/* border: 5px solid rgb(181, 185, 204); */
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 2px 2px 12px 2px rgb(134, 132, 132);
+}
+.item-image {
+	display: flex;
+	height: 310px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px 8px 0px 0px;
+	transform: scale(1);
+	transition: transform 0.5s ease;
+}
+.item-image:hover {
+	transform: scale(1.3);
+}
+.overflow {
+	overflow: hidden;
+	padding: 0px !important;
+}
+.item-rating {
+	color: rgb(230, 209, 19);
+	font-weight: bold;
+	font-style: italic;
+}
+.item-btn {
+	float: right;
+	margin: 50px 20px 50px 0px;
+	display: block;
+}

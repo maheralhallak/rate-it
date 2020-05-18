@@ -13,7 +13,7 @@ const initialState = {
   itemsPerPage: 6
 }
 
-export default function Card() {
+export default function Card1() {
   // console.log("data from file", data.products)
   const [state, setstate] = useState(initialState)
   function handleClick(event) {
@@ -33,7 +33,7 @@ export default function Card() {
   console.log(indexOfFirstItem, indexOfLastItem, currentItems)
   const renderProducts = currentItems.map((product, index) => {
     return (<div key={product.name} className="col-md-6 mt-5" >
-      <Link to={'/product/' + product.id}>
+      <Link to={'/item/' + product.id}>
         <div className="card" style={{ margin: "0 5px" }}>
           <container>
             <Row className="show-grid">
@@ -88,7 +88,7 @@ export default function Card() {
     <>
       <div className="container-fluid mb-5" style={{ padding: 0 }}>
         <div className="row col-md-12 mt-5" style={{ padding: 0, margin: "0 10px" }}>
-          <Category uri='product' />
+          <Category uri='item' />
 
           <div className="row col-md-8">
             {/* First Card  */}

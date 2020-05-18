@@ -52,7 +52,7 @@ function Product(props) {
               <h4 className="text-product">{product.resolved}</h4>
               <span>{product.resolvedText}</span>
             </div>
-            <Link className="btn seven animated fadeInLeft delay-2s" to="/brands">Go Back</Link>
+            <Link className="btn btn-goBack seven animated fadeInLeft delay-2s" to="/brands">Go Back</Link>
           </div>
         </div>
 
@@ -66,7 +66,6 @@ function Product(props) {
     </div>
 
     {/*   */}
- 
 
   </div>
 
