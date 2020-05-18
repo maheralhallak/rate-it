@@ -68,6 +68,7 @@ class Category extends Component {
   }
 
   render() {
+    var uri = this.props.uri
     const { term, products } = this.state;
     return (
 
@@ -86,7 +87,7 @@ class Category extends Component {
             {
               products.filter(searchingFor(term)).map(product =>
                 <div key={product.id} className="text">
-                  <Link to={'/product/' + product._id}>
+                  <Link to={'/' + uri + '/' + product._id}>
                     <p>{product.name}<span className="num">{product.num}</span></p>
                   </Link>
                 </div>

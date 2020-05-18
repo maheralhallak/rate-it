@@ -13,7 +13,7 @@ export class NavBar extends Component {
             <Nav.Link className="link" href="/brands">Brands</Nav.Link>
             <Nav.Link className="link" href="/signin">Signin</Nav.Link>
             <Nav.Link className="link" href="/register">Register</Nav.Link>
-            <Nav.Link className="link" href="/pricing">Pricing</Nav.Link>
+            <Nav.Link className="link" href="/items">Items</Nav.Link>
           </Nav>
         </Navbar>
       </div>

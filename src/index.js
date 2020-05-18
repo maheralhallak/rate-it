@@ -8,7 +8,9 @@ import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import SignIn from './components/Auth/Signin'
 import Register from './components/Auth/Register';
 import Card from './components/cards/card';
+import Card1 from './components/cards/card1';
 import Product from './components/cards/Product';
+import Items from './components/cards/items/Items';
 import NavBar from './components/navbar/NavBar';
 import HomePage from "./components/homePage/HomePage";
 import Footer from './components/footer/Footer'
@@ -21,9 +23,11 @@ const routing = (
       {/* <Route exact path="/" component={App} /> */}
       <Route exact path="/" component={HomePage} />
       <Route path="/brands" component={Card} />
+      <Route path="/items" component={Card1} />
       <Route path="/signin" component={SignIn} />
       <Route path="/register" component={Register} />
       <Route path="/product/:id" component={Product} />
+      <Route path="/item/:id" component={Items} />
       {/* <Route component={"Notfound"} /> */}
 
     </Switch>

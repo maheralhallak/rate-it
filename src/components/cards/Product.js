@@ -74,7 +74,7 @@ function Product(props) {
               <h4 className="text-product">{product.resolved}</h4>
               <span>{product.resolvedText}</span>
             </div>
-            <Link className="btn seven animated fadeInLeft delay-2s" to="/brands">Go Back</Link>
+            <Link className="btn btn-goBack seven animated fadeInLeft delay-2s" to="/brands">Go Back</Link>
           </div>
         </div>
 
@@ -98,11 +98,10 @@ function Product(props) {
       <ul>
         <div>
           <img className="img3" src={product.image3} alt="icon" />
-          the window is coming up because my screen dims just like it did when the
+          <div>the window is coming up because my screen dims just like it did when the
           window popped up. So that's another layer to my problem. I can't even enter
-          into dual display mode anymore because I can't hit the Keep Settings button on
-          the popup window.
-      </div>
+          into dual display mode anymore because I can't hit the Keep Settings button on the popup window.</div>
+        </div>
         <div>{liElement}</div>
       </ul>
     </div>

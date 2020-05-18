@@ -10,10 +10,11 @@ body {
 	border-radius: 8px;
 	margin: 10px 0px 10px 60px;
 	box-shadow: 5px 6px 9px 5px rgb(73, 73, 73);
+	filter: grayscale(100%);
 }
 .img2:hover {
 	box-shadow: 5px 6px 9px 5px rgb(87, 144, 155);
-	filter: grayscale(100%);
+	filter: grayscale(0%);
 }
 .img3 {
 	width: 50px;
@@ -44,7 +45,7 @@ body {
 	color: rgb(84, 167, 59);
 	font-weight: 900;
 }
-.btn {
+.btn-goBack {
 	margin-top: 30px;
 	color: #fff;
 	font-size: 20px;
@@ -52,7 +53,7 @@ body {
 	padding: 10px 28px;
 	background: #5bb1eb;
 }
-.btn:hover {
+.btn-goBack:hover {
 	background: #f59949;
 }
 .text-rating {
