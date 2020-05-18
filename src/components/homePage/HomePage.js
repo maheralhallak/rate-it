@@ -161,10 +161,10 @@ export default class HomePage extends Component {
     var see = (
       <section className="secondPara1" id="secondParagraph">
         <div className="secondPara">
-         <p style={{color:'black'}}>Consumer review :</p>
+          <p style={{ color: "black" }}>Consumer review :</p>
           <p>
-             sites have been one of the Internet’s most
-            persistent and valuable resources since the very beginning.
+            sites have been one of the Internet’s most persistent and valuable
+            resources since the very beginning.
           </p>
           <hr></hr>
           <p>

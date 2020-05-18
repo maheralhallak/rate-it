@@ -61,19 +61,7 @@ body {
 	font-weight: 900;
 	margin: 0px 0px 25px 350px;
 }
-.product-input {
-	margin: 10px 0px 10px 0px !important;
-	border-bottom: 1px solid #000 !important;
-	background: none;
-	border: none;
-	outline: none;
-	overflow: hidden;
-	font-size: 18px;
-	width: 400px;
-}
-.product-input:focus {
-	border-bottom: 3px solid green !important;
-}
+
 .p-box {
 	margin: 30px 0px 30px 160px;
 	padding: 0;
@@ -91,8 +79,4 @@ body {
 .userImg {
 	width: 50px;
 	margin: 10px 5px 10px 180px !important;
-}
-.commentLi {
-	margin: 35px 15px;
-	font-family: arial;
 }

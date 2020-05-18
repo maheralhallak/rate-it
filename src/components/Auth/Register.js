@@ -1,6 +1,6 @@
 import React,{useState , useEffect} from 'react';
 
-
+import './style.css'
 // MateialUi part starts here //
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -17,12 +17,13 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-
+import rateit from './image/rate-it.jpg'
 // MaterialUi part ends here //
 
 // Imported Axios to have 2 way connection between frontend and backend
 import axios from 'axios';
 import  { Redirect, Link } from 'react-router-dom'
+import { red } from '@material-ui/core/colors';
 
 function Copyright() {
   return (
@@ -38,12 +39,16 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+/*   body:{
+    backgroundImage:`url(${/image/rate-it.jpg})`,
+  }, */
   paper: {
-    marginTop: theme.spacing(2),
+   
+    marginTop: theme.spacing(0),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '5'
+    padding: '0',
     
   },
   avatar: {
@@ -55,12 +60,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(0)
   },
   submit: {
-    margin: theme.spacing(2, 0, 1),
+    margin: theme.spacing(3, 0, 2),
     
   },
   parent:{
     display: 'flex',
-    alignItems:'center'
+    alignItems:'center',
+    backgroundImage:"url(./image/rate-it.jpg)"
   },
   gender:{
     display:'flex',
@@ -128,8 +134,8 @@ export default function SignUp() {
     }).catch(err=>{throw err})
   }
     //express bcrypt jwt 
-  return (
-    <div className="parent">
+  return ( 
+    <div className="parent" style={{paddingTop:"12px"}}>
     <Container component="main" maxWidth="xl" >
       <Box padding={2} {...defaultProps}>
       <CssBaseline />
@@ -214,11 +220,14 @@ export default function SignUp() {
           </Button>
           <Grid container>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link to="/signin" variant="body2">
                 {"Already registered? Log in!"}
               </Link>
             </Grid>
           </Grid>
+          <Link to="/Brand-register" variant="body1" style={{color:"red", fontSize:"1.4em"}}>
+                {"Register Your Brand here"}
+              </Link>
         </form>
       </div>
       <Box mt={8}>
