@@ -13,7 +13,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -25,7 +25,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: "The foods of the McDonald's are delicious, savory and super flavor ",
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -37,7 +37,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Yes, these are all original, safe & fashionable products',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -45,11 +45,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-4" defaultValue={2} max={5} /></Box>,
-      id: 4, image: '/img1/b4.jpg', image3: '/img2/edit.png', image2: '/img2/p4.jpg', name: "Lay's",
+      id: 4, image: '/img1/b4.png', image3: '/img2/edit.png', image2: '/img2/p4.jpg', name: "Lay's",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: "Items of Lay's are super flavor, savory & tasty",
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -61,7 +61,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Aldi market are fresh, tatsy & foolprof',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -69,11 +69,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-6" defaultValue={2} max={5} /></Box>,
-      id: 6, image: '/img1/b6.jpg', image2: '/img2/p6.jpg', image3: '/img2/edit.png', name: 'Mercedes',
+      id: 6, image: '/img1/b6.png', image2: '/img2/p6.jpg', image3: '/img2/edit.png', name: 'Mercedes',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Benz automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -81,11 +81,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-7" defaultValue={2} max={5} /></Box>,
-      id: 7, image: '/img1/b7.jpg', image3: '/img2/edit.png', image2: '/img2/p7.jpg', name: "Schwan'z",
+      id: 7, image: '/img1/b7.png', image3: '/img2/edit.png', image2: '/img2/p7.jpg', name: "Schwan'z",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: "The foods of the Schwan's are delicious, savory and super flavor",
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -97,7 +97,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -109,7 +109,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Rewe market are trustworthy fresh & foolprof',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -121,7 +121,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Lidl market are fresh, tasty & fashionable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -133,7 +133,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Kaufland market are fresh, tatsy & reduced',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -145,7 +145,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are resistant, novelty & innovation',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -157,7 +157,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Edeka market are fresh, savory & roborant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -169,7 +169,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are innovation, resistant  & novelty',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -181,7 +181,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuff of Netto market are fresh, savory & super flavor',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -189,11 +189,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-16" defaultValue={2} max={5} /></Box>,
-      id: 16, image: '/img1/b16.jpg', image3: '/img2/edit.png', image2: '/img2/p16.jpg', name: "Lenovo",
+      id: 16, image: '/img1/b16.png', image3: '/img2/edit.png', image2: '/img2/p16.jpg', name: "Lenovo",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are innovation, assistant & novelty',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -201,11 +201,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-17" defaultValue={2} max={5} /></Box>,
-      id: 17, image: '/img1/b17.webp', image3: '/img2/edit.png', image2: '/img2/p17.PNG', name: 'NBA',
+      id: 17, image: '/img1/b17.png', image3: '/img2/edit.png', image2: '/img2/p17.PNG', name: 'NBA',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Clothes of NBA are modern, new style and fashionable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -217,7 +217,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the products are new style, durable & fashionable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -229,7 +229,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are innovation, resistant & novelty',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -241,7 +241,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the products are novelty, innovation & resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -249,9 +249,9 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-21" defaultValue={2} max={5} /></Box>,
-      id: 21, image: '/img1/b21.gif', image3: '/img2/edit.png', image2: '/img2/p21.jpg', name: 'Kappa',
+      id: 21, image: '/img1/b21.png', image3: '/img2/edit.png', image2: '/img2/p21.jpg', name: 'Kappa',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
-      return: '%93', returnText: 'Return rate',
+      return: '%93', returnText: 'Return rate', des: 'Items of Kappa are new style and fashionable',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       speed: 'Too fast', speedText: 'Average Return',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
@@ -265,7 +265,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Peugeot automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -277,7 +277,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the items are durable, novelty & innovation',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -289,7 +289,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Foods os Starbucks are tasty, savory & delicious',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -297,11 +297,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-25" defaultValue={2} max={5} /></Box>,
-      id: 25, image: '/img1/b25.jpg', image3: '/img2/edit.png', image2: '/img2/p25.jpg', name: 'Philips',
+      id: 25, image: '/img1/b25.png', image3: '/img2/edit.png', image2: '/img2/p25.jpg', name: 'Philips',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the items are novelty, resistant & safe',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -309,11 +309,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-26" defaultValue={2} max={5} /></Box>,
-      id: 26, image: '/img1/b26.jpg', image3: '/img2/edit.png', image2: '/img2/p26.jpg', name: 'Panasonic',
+      id: 26, image: '/img1/b26.png', image3: '/img2/edit.png', image2: '/img2/p26.jpg', name: 'Panasonic',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Items of Panasonic are innovation, resistant & security',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -325,7 +325,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Skoda automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -333,11 +333,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-28" defaultValue={2} max={5} /></Box>,
-      id: 28, image: '/img1/b28.jpg', image3: '/img2/edit.png', image2: '/img2/p28.jpg', name: "Motorola",
+      id: 28, image: '/img1/b28.png', image3: '/img2/edit.png', image2: '/img2/p28.jpg', name: "Motorola",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are new innovation, assistant & durable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -345,11 +345,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-29" defaultValue={2} max={5} /></Box>,
-      id: 29, image: '/img1/b29.jpg', image3: '/img2/edit.png', image2: '/img2/p29.webp', name: 'Amazon',
+      id: 29, image: '/img1/b29.png', image3: '/img2/edit.png', image2: '/img2/p29.webp', name: 'Amazon',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All stuffs of amazon are safe, resistant & fashionable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -361,7 +361,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products are resistant, modern & durable',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -369,11 +369,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-31" defaultValue={2} max={5} /></Box>,
-      id: 31, image: '/img1/b31.jpg', image3: '/img2/edit.png', image2: '/img2/p31.jpg', name: 'Puma',
+      id: 31, image: '/img1/b31.png', image3: '/img2/edit.png', image2: '/img2/p31.jpg', name: 'Puma',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The Items are modern, new style & resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -381,11 +381,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-32" defaultValue={2} max={5} /></Box>,
-      id: 32, image: '/img1/b32.jpg', image3: '/img2/edit.png', image2: '/img2/p32.jpg', name: "Reebok",
+      id: 32, image: '/img1/b32.png', image3: '/img2/edit.png', image2: '/img2/p32.jpg', name: "Reebok",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the products are durable, modern & resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -393,11 +393,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-33" defaultValue={2} max={5} /></Box>,
-      id: 33, image: '/img1/b33.webp', image3: '/img2/edit.png', image2: '/img2/p33.jpg', name: 'Nokia',
+      id: 33, image: '/img1/b33.png', image3: '/img2/edit.png', image2: '/img2/p33.jpg', name: 'Nokia',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Products of Nokia are resistant, novelty & creative',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -405,11 +405,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-34" defaultValue={2} max={5} /></Box>,
-      id: 34, image: '/img1/b34.gif', image3: '/img2/edit.png', image2: '/img2/p34.jpg', name: 'LG',
+      id: 34, image: '/img1/b34.png', image3: '/img2/edit.png', image2: '/img2/p34.jpg', name: 'LG',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Items of LG are innovation, resistant & new style',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -417,11 +417,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-35" defaultValue={2} max={5} /></Box>,
-      id: 35, image: '/img1/b35.jpg', image3: '/img2/edit.png', image2: '/img2/p35.jpg', name: 'Toshiba',
+      id: 35, image: '/img1/b35.png', image3: '/img2/edit.png', image2: '/img2/p35.jpg', name: 'Toshiba',
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the products are functional, resistant & new style',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -429,11 +429,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-36" defaultValue={2} max={5} /></Box>,
-      id: 36, image: '/img1/b36.jpg', image3: '/img2/edit.png', image2: '/img2/p36.jpg', name: "Mitsubishi",
+      id: 36, image: '/img1/b36.png', image3: '/img2/edit.png', image2: '/img2/p36.jpg', name: "Mitsubishi",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the automobiles are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -445,7 +445,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Automobiles of Volkswagen are new design and resistant',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -457,7 +457,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'Items of Red Bull are funny, best style & force',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -469,7 +469,7 @@ export default {
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'The products of Canon are resistant, memorable & novelty',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     },
@@ -477,11 +477,11 @@ export default {
       rating: <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
         <Typography className="ml-4" component="legend">Rating</Typography>
         <Rating name="customized-40" defaultValue={2} max={5} /></Box>,
-      id: 40, image: '/img1/b40.jpg', image3: '/img2/edit.png', image2: '/img2/p40.jpg', name: "Nivea",
+      id: 40, image: '/img1/b40.png', image3: '/img2/edit.png', image2: '/img2/p40.jpg', name: "Nivea",
       icon1: <i className="ml-3 fa fa-thumbs-o-up fa-3x text-success mt-2" aria-hidden="true"></i>,
       return: '%93', returnText: 'Return rate',
       icon2: <i className="ml-3 fa fa-clock-o fa-3x text-success mt-2" aria-hidden="true"></i>,
-      speed: 'Too fast', speedText: 'Average Return',
+      speed: 'Too fast', speedText: 'Average Return', des: 'All of the products are natural, original & safe',
       icon3: <i className="ml-3 fa fa-check-square-o fa-3x text-success mt-2" aria-hidden="true"></i>,
       resolved: '%81', resolvedText: 'Resolved'
     }

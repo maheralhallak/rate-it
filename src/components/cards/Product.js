@@ -10,7 +10,7 @@ import CommentBox from '../comment/CommentBox'
 
 function Product(props) {
 
-  
+
   console.log("id inside product", props.match.params.id);
   // const [data,setData] = React.useState(false);
   // if ( ! data ) fetch(...).then(..).then(data=>setData(data))
@@ -62,7 +62,7 @@ function Product(props) {
     <div className="text-rating">{product.rating}</div>
 
     <div className="input">
-      <CommentBox brandId={props.match.params.id}/>
+      <CommentBox brandId={props.match.params.id} />
     </div>
 
     {/*   */}
@@ -73,3 +73,10 @@ function Product(props) {
 }
 
 export default Product;
+
+
+
+// DB_NAME=
+// DB_USER=
+// DB_PASS=
+// JWT_SECRET_KEY= 

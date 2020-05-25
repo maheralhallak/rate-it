@@ -1,6 +1,5 @@
 .out-link {
-	background: rgb(222, 231, 231);
-	margin: 200px 0px 0px 0px;
+	margin: 150px 0px 0px 0px;
 }
 .outDiv {
 	margin-top: 70px;
@@ -17,7 +16,8 @@ li {
 }
 .out-link li a:hover {
 	text-decoration: none;
-	color: rgb(2, 1, 1);
+	color: rgb(96, 221, 221);
+	cursor: pointer;
 }
 .h4 {
 	margin-left: 40px;

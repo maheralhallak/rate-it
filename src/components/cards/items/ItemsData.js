@@ -186,9 +186,9 @@ export default {
       name3: 'Volkswagen', img3: '../img3/p37-3.jpg', type3: 'Golf 8', description3: 'Design of 2019', rating3: 'rating: 4.8',
     },
     {
-      id: 38, name1: 'Red Bul', img1: '../img3/p38-1.jpg', type1: 'Redbul Sport', description1: 'funny', rating1: 'rating: 4.5',
-      name2: 'Red Bul', img2: '../img3/p38-2.jpg', type2: 'Clothes', description2: 'best Style', rating2: 'rating: 4.3',
-      name3: 'Red Bul', img3: '../img3/p38-3.jpg', type3: 'Drinks', description3: 'force', rating3: 'rating: 4.8',
+      id: 38, name1: 'Red Bull', img1: '../img3/p38-1.jpg', type1: 'Redbul Sport', description1: 'funny', rating1: 'rating: 4.5',
+      name2: 'Red Bull', img2: '../img3/p38-2.jpg', type2: 'Clothes', description2: 'best Style', rating2: 'rating: 4.3',
+      name3: 'Red Bull', img3: '../img3/p38-3.jpg', type3: 'Drinks', description3: 'force', rating3: 'rating: 4.8',
     },
     {
       id: 39, name1: 'Canon', img1: '../img3/p39-1.jpg', type1: 'Camcorder', description1: 'best story', rating1: 'rating: 4.5',
@@ -198,7 +198,7 @@ export default {
     {
       id: 40, name1: 'NIVEA', img1: '../img3/p40-1.webp', type1: "Women's care", description1: 'Natural', rating1: 'rating: 4.5',
       name2: 'NIVEA', img2: '../img3/p40-2.jpg', type2: 'All of care', description2: 'Orginal', rating2: 'rating: 4.3',
-      name3: 'NIVEA', img3: '../img3/p40-3.jpg', type3: "Men's care", description3: 'Natural', rating3: 'rating: 4.8',
+      name3: 'NIVEA', img3: '../img3/p40-3.jpg', type3: "Men's care", description3: 'Safe', rating3: 'rating: 4.8',
     }
   ]
 }

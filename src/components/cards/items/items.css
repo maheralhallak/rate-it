@@ -1,5 +1,8 @@
+.out-div {
+	background-image: url('../bg1.jpg');
+}
 .item-h1 {
-	margin-top: 80px;
+	padding-top: 80px;
 	font-family: serif;
 	text-align: center;
 	color: brown;
@@ -19,7 +22,7 @@
 	/* border: 5px solid rgb(181, 185, 204); */
 	border-radius: 8px;
 	overflow: hidden;
-	box-shadow: 2px 2px 12px 2px rgb(134, 132, 132);
+	box-shadow: 5px 5px 12px 5px rgb(134, 132, 132);
 }
 .item-image {
 	display: flex;
@@ -43,7 +46,7 @@
 	font-style: italic;
 }
 .item-btn {
-	float: right;
-	margin: 50px 20px 50px 0px;
+	float: right !important;
+	margin: 50px 20px 50px 30px;
 	display: block;
 }

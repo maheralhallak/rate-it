@@ -34,35 +34,16 @@ export default function Card1() {
   const renderProducts = currentItems.map((product, index) => {
     return (<div key={product.name} className="col-md-6 mt-5" >
       <Link to={'/item/' + product.id}>
-        <div className="card" style={{ margin: "0 5px" }}>
+        <div className="card card2 mt-5" style={{ margin: "0 5px" }}>
           <container>
             <Row className="show-grid">
-              <Col md={6}>
-                <img className="img1 mt-3 ml-4" src={product.image} alt="brand" />
-              </Col>
-              <Col md={6}>
-                {product.rating}
+              <Col>
+                <img className="card1-img1" src={product.image} alt="brand" />
               </Col>
             </Row>
           </container>
-          <h6 className="d-block text-bold text-center mt-3">{product.name}</h6>
-          <div className="justify-content-around d-flex">
-            <div className="card-body col-md-4">
-              {product.icon1}
-              <h5 className="text-center d-block">{product.return}</h5>
-              <span className="inCard text-nowrap text-center">{product.returnText}</span>
-            </div>
-            <div className="card-body col-md-4 text-nowrap bd-highlight">
-              {product.icon2}
-              <h5 className="text-center d-block">{product.speed}</h5>
-              <span className="inCard text-center text-nowrap">{product.speedText}</span>
-            </div>
-            <div className="card-body col-md-4">
-              {product.icon3}
-              <h5 className="ml-3 font-weight-bold d-block text-bold">{product.resolved}</h5>
-              <span className="inCard ml-2 text-nowrap">{product.resolvedText}</span>
-            </div>
-          </div>
+          <h4 className="card1-name d-block text-bold text-center">{product.name}</h4>
+          <div className="description text-center">{product.des}</div>
         </div>
       </Link>
     </div>);
@@ -85,10 +66,12 @@ export default function Card1() {
   });
 
   return (
-    <>
+    <div className="card1">
       <div className="container-fluid mb-5" style={{ padding: 0 }}>
-        <div className="row col-md-12 mt-5" style={{ padding: 0, margin: "0 10px" }}>
+        <div className="row col-md-12" style={{ padding: 0, margin: "0 10px" }}>
+
           <Category uri='item' />
+
 
           <div className="row col-md-8">
             {/* First Card  */}
@@ -103,6 +86,6 @@ export default function Card1() {
       </div>
 
       <Links />
-    </>
+    </div>
   );
 }
