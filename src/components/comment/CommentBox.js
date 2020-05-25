@@ -21,7 +21,7 @@
         {headers: {'x-auth-token':localStorage.getItem('token')}})
         .then(function (response) {
             console.log(response);
-            if (response.data.status == 'success') {
+            if (response.data.status === 'success') {
               setshowComment(response.data.message);
             }else{
                 localStorage.removeItem('token');
@@ -32,7 +32,7 @@
             console.log(error);
            
         }); 
-    },[])
+    },[brandId, history, productId])
 
     
 
@@ -58,7 +58,7 @@
         })
         .then(function (response) {
             console.log(response);
-            if (response.data.status == 'success') {
+            if (response.data.status === 'success') {
                 setshowComment(response.data.message);
                 console.log(response.data.message);
             }else{

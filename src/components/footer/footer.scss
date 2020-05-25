@@ -3,6 +3,9 @@ body {
 	padding: 0;
 	background: rgb(233, 231, 231);
 }
+.follow{
+	font-size: 12px;
+}
 .ul {
 	position: absolute;
 	left: 50%;
@@ -118,12 +121,14 @@ body {
 	background: rgb(110, 192, 212);
 	color: white;
 }
-
+a>span{
+	display: none;
+}
 /*!  Footer  */
 footer {
 	text-align: center;
 	background: rgb(180, 179, 179);
-	font-size: 38px;
+	font-size: 4px;
 	color: rgb(251, 251, 251);
 	padding: 10px 0px;
 	letter-spacing: 3px;
@@ -134,4 +139,18 @@ footer {
 	padding-top: 5px !important;
 	margin-top: 10px !important;
 	font-size: 40px;
+}
+.lfooter{
+	/* height: 20vh; */
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-around;
+	padding-top: 100px;
+	
+}
+.lfooter a{
+	color: black;
+	font-weight: 900;
+	
 }

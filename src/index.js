@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux'
 import { combineReducers, createStore } from 'redux'
-import { reducer as commentsReducer, withComments } from './redux/comments'
+import { reducer as commentsReducer } from './redux/comments'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import { Switch, Route,  BrowserRouter as Router } from 'react-router-dom'
@@ -14,12 +14,12 @@ import Card1 from './components/cards/card1';
 import Product from './components/cards/Product';
 import Items from './components/cards/items/Items';
 import NavBar from './components/navbar/NavBar';
-//import HomePage from "./components/homePage/HomePage";
+import HomePage from "./components/homePage/HomePage";
 import Footer from './components/Footer/Footer'
 import HomePage2 from './components/HomePage2/HomePage2'
 import BrandSignUp from './components/Auth/RegisterBrand'
-import { Button } from 'react-bootstrap'
-
+import Primary_footer from './components/Footer/Primary-footer'
+/* import NotFoundPage from './components/NotFoundPage' */
 import axios from 'axios';
 axios.defaults.headers['x-auth-token'] = localStorage.getItem('token');
 
@@ -49,7 +49,7 @@ const routing = (
     <Switch>
 
       {/* <Route exact path="/" component={App} /> */}
-      {/*<Route exact path="/" component={HomePage} />*/}
+      <Route exact path="/" component={HomePage} />
       <Route path="/brands" component={Card} />
       <Route path="/items" component={Card1} />
       <Route path="/signin" component={SignIn} />
@@ -57,11 +57,15 @@ const routing = (
       <Route path="/Brand-register" component={BrandSignUp} />
       <Route path="/product/:id" component={Product} />
       <Route path="/item/:id" component={Items} />
-      {/* <Route component={"Notfound"} /> */}
+      <Route path="/welcome" component={HomePage2} />
+      <Route path="/footer" component={Primary_footer} />
+      
+     {/*  <Route component={"Notfound"} /> */}
 
     </Switch>
-   {/*  <Footer /> */}
-  </Router>
+    
+    </Router>
+    <Footer />
   </Provider>
 )
 ReactDOM.render(routing, document.getElementById('root'))

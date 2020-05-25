@@ -76,7 +76,7 @@ function SignIn() {
   const classes = useStyles();
   
   const [stateSignin, setStateSigin] = useState(false);
-  const [wrongCredential, setWrongCredential] = useState(false);
+  // const [wrongCredential, setWrongCredential] = useState(false);
 
   let registerHandler = (e) => {
     e.preventDefault();
@@ -94,17 +94,17 @@ function SignIn() {
         setStateSigin(true);
       }else {
         localStorage.setItem('token','');
-        setWrongCredential(true);
+       // setWrongCredential(true);
       }
     })
     .catch(function (error){
       console.log(error);
-      setWrongCredential(true)
+      //setWrongCredential(true)
       
     })
   }
   if (stateSignin) {
-    return <Redirect to='/' />
+    return <Redirect to='/welcome' />
   } else {
   return (
     <div className="parent">

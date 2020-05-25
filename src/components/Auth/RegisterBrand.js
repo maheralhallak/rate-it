@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {useHistory} from 'react-router-dom';
 // MateialUi part starts here //
 import Avatar from "@material-ui/core/Avatar";
@@ -16,7 +16,7 @@ import Container from "@material-ui/core/Container";
 
 // Imported Axios to have 2 way connection between frontend and backend
 import axios from "axios";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -93,13 +93,13 @@ export default function BrandSignUp() {
     if (!file) return;
     //console.log(file);
     var reader = new FileReader();
-    var url = reader.readAsDataURL(file);
+    
 
     reader.onloadend = function (e) {
       setState({
         imgSrc: [reader.result],
       });
-    }.bind(this);
+    };
   // Would see a path?
     // TODO: concat files
   };
@@ -181,7 +181,6 @@ export default function BrandSignUp() {
                 accept="image/*"
                 className={classes.input}
                 id="contained-button-file"
-                multiple
                 type="file"
                 name="logo"
                 multiple="false"
@@ -203,6 +202,7 @@ export default function BrandSignUp() {
                       maxHeight: "150px",
                       marginLeft: "5%",
                     }}
+                    alt="something"
                   />
                 ) : null}
               </label>
