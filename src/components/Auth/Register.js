@@ -1,4 +1,4 @@
-import React,{useState , useEffect} from 'react';
+import React,{useState } from 'react';
 
 import './style.css'
 // MateialUi part starts here //
@@ -17,13 +17,12 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import rateit from './image/rate-it.jpg'
+/* import rateit from './image/rate-it.jpg' */
 // MaterialUi part ends here //
-
 // Imported Axios to have 2 way connection between frontend and backend
 import axios from 'axios';
-import  { Redirect, Link } from 'react-router-dom'
-import { red } from '@material-ui/core/colors';
+import  { Link } from 'react-router-dom'
+
 
 function Copyright() {
   return (
@@ -124,7 +123,7 @@ export default function SignUp() {
       if (reject) {
         console.log(reject);
       } else {
-        if(result.status == 'success'){
+        if(result.status === 'success'){
           //redirect login
         }else{
           //alert message
@@ -229,10 +228,10 @@ export default function SignUp() {
                 {"Register Your Brand here"}
               </Link>
         </form>
-      </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
+        </div>
+        <Box mt={8}>
+          <Copyright />
+        </Box>
       </Box>
     </Container>
     </div>

@@ -17,6 +17,7 @@ export default function CommentBox(props) {
 
 
     useEffect(() => {
+
         axios.get(`/comment/${brandId}${productId ? `/${productId}` : ''}`,
             { headers: { 'x-auth-token': localStorage.getItem('token') } })
             .then(function (response) {
@@ -33,6 +34,7 @@ export default function CommentBox(props) {
 
             });
     }, [])
+
 
 
 
@@ -68,6 +70,7 @@ export default function CommentBox(props) {
             })
             .catch(function (error) {
                 console.log(error);
+
                 history.push('/');
             });
 
