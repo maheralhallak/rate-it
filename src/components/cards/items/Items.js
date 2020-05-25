@@ -59,8 +59,12 @@ function Items(props) {
 
         </div>
       </div>
-      {/* <Link className="btn item-btn btn-outline-success five animated jackInTheBox delay-2s" to={'/'}>Home Page</Link> */}
-      {/* <Link className="btn item-btn btn-outline-success six animated fadeInUp delay-2s" to={'/brands/'}>Product Page</Link> */}
+
+      <div className="row item-btns">
+        <Link className="btn item-btn btn-outline-success five animated jackInTheBox delay-2s" to={'/'}>Home Page</Link>
+        <Link className="btn item-btn btn-outline-success six animated fadeInUp delay-2s" to={'/brands/'}>Product Page</Link>
+        <Link className="btn item-btn btn-outline-success six animated jackInTheBox delay-2s" to={'/items/'}>Items Page</Link>
+      </div>
     </div>
   )
 }
