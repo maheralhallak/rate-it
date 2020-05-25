@@ -72,7 +72,7 @@ class Category extends Component {
     const { term, products } = this.state;
     return (
 
-      <div className="category col-md-3 mt-5 sticky-top float-left">
+      <div style={{ marginTop: "115px" }} className="category col-md-3 sticky-top float-left">
         <h4>Categories</h4>
         <form>
           <div className="container-fluid mr-5 col-md-10">

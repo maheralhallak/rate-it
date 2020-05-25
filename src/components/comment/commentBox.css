@@ -1,18 +1,12 @@
-
 .form-btn {
 	background: lightgreen;
 	padding: 8px 15px;
 	border-radius: 7px;
 	border: none;
 }
-.userImg {
-	width: 50px;
-	margin: 10px 5px 10px 180px !important;
+.product-input {
+	margin-bottom: 20px !important;
 }
-.commentLi {
-	margin: 35px 15px;
-	font-family: arial;
-}
-.text-area{
-    resize: none;
+.text-area {
+	resize: none;
 }

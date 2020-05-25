@@ -34,7 +34,7 @@ export default function Card() {
   const renderProducts = currentItems.map((product, index) => {
     return (<div key={product.name} className="col-md-6 mt-5" >
       <Link to={'/product/' + product.id}>
-        <div className="card" style={{ margin: "0 5px" }}>
+        <div className="card mt-5" style={{ margin: "0 5px" }}>
           <container>
             <Row className="show-grid">
               <Col md={6}>
@@ -87,7 +87,7 @@ export default function Card() {
   return (
     <>
       <div className="container-fluid mb-5" style={{ padding: 0 }}>
-        <div className="row col-md-12 mt-5" style={{ padding: 0, margin: "0 10px" }}>
+        <div className="row col-md-12" style={{ padding: 0, margin: "0 10px" }}>
           <Category uri='product' />
 
           <div className="row col-md-8">

@@ -1,12 +1,16 @@
 .navi {
-
-	background: rgb(246,239,3)!important;
-	background: linear-gradient(279deg, rgba(246,239,3,1) 0%, rgba(11,154,0,0.7203256302521008) 51%, rgba(185,228,0,1) 100%)!important;
+	background: rgb(246, 239, 3) !important;
+	background: linear-gradient(
+		279deg,
+		rgba(246, 239, 3, 1) 0%,
+		rgba(11, 154, 0, 0.7203256302521008) 51%,
+		rgba(185, 228, 0, 1) 100%
+	) !important;
 	z-index: 20;
 	width: 100%;
 }
 
-.link {
+.navbar-link {
 	color: #f5b63d;
 	text-shadow: black 0 1px 2px;
 	font-weight: 700;
@@ -15,12 +19,13 @@
 	transition: all ease 1s;
 }
 
-.link:hover {
+.navbar-link:hover {
 	transform: scale(1.3, 1.3);
 	transition: all ease 1s;
 	color: black;
 	text-decoration: underline;
 }
+
 .d-link{
 	color: black;
 }
@@ -28,3 +33,4 @@
 	color: black;
 	
 }
+

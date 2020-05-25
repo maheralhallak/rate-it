@@ -18,12 +18,13 @@ export class NavBar extends Component {
         <Navbar bg="light" variant="primary" className="navi  sticky-top">
 
           <Nav className="mr-auto sticky-top">
+
             <Nav.Link className="link text-weight-bold" href="/welcome"> Home</Nav.Link>
             <Nav.Link className="link" href="/brands">Brands</Nav.Link>
             
             
             <Nav.Link className="link" href="/items">Items</Nav.Link>
-          </Nav>
+
           
     {[DropdownButton].map((DropdownType, idx) => (
      
