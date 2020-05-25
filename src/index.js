@@ -2,25 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux'
-import { combineReducers, createStore } from 'redux'
-import { reducer as commentsReducer } from './redux/comments'
+import { combineReducers, createStore } from 'redux';
+import { reducer as commentsReducer } from './redux/comments';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import SignIn from './components/Auth/Signin'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import SignIn from './components/Auth/Signin';
 import Register from './components/Auth/Register';
 import Card from './components/cards/card';
 import Card1 from './components/cards/card1';
 import Product from './components/cards/Product';
 import Items from './components/cards/items/Items';
-import NavBar from './components/navbar/NavBar';
+import NaviBar from './components/navbar/NavBar';
 
-import HomePage from "./components/homePage/HomePage";
+
 import Footer from './components/Footer/Footer'
-//import HomePage from "./components/homePage/HomePage";
-import HomePage2 from './components/HomePage2/HomePage2'
-import BrandSignUp from './components/Auth/RegisterBrand'
-import Primary_footer from './components/Footer/Primary-footer'
+import HomePage from "./components/homePage/HomePage";
+import HomePage2 from './components/HomePage2/HomePage2';
+import BrandSignUp from './components/Auth/RegisterBrand';
 /* import NotFoundPage from './components/NotFoundPage' */
 import axios from 'axios';
 axios.defaults.headers['x-auth-token'] = localStorage.getItem('token');
@@ -47,15 +46,15 @@ const routing = (
     {/* <ComponentWithComments id={1}/>  */}
     <Router>
 
-      <NavBar />
+      <NaviBar />
       <Switch>
 
 
-    </Router>
-    <Footer />
 
-        {/* <Route exact path="/" component={App} /> */}
-        {/*<Route exact path="/" component={HomePage} />*/}
+
+
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/welcome" component={HomePage2} />
         <Route path="/brands" component={Card} />
         <Route path="/items" component={Card1} />
         <Route path="/signin" component={SignIn} />
@@ -68,7 +67,7 @@ const routing = (
       </Switch>
       {/*  <Footer /> */}
     </Router>
-
+    <Footer />
   </Provider>
 )
 ReactDOM.render(routing, document.getElementById('root'))

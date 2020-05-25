@@ -6,7 +6,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import './navbar.css'
 
 
-export class NavBar extends Component {
+export default class NaviBar extends Component {
   
   render() {
     
@@ -24,7 +24,7 @@ export class NavBar extends Component {
             
             
             <Nav.Link className="link" href="/items">Items</Nav.Link>
-
+          </Nav>
           
     {[DropdownButton].map((DropdownType, idx) => (
      
@@ -69,4 +69,3 @@ export class NavBar extends Component {
   }
 }
 
-export default NavBar

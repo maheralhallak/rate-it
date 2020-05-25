@@ -1,12 +1,12 @@
 
-import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import axios from 'axios'
-import User from '../comment/user.png'
-import product from './edit.png'
-import CommentList from './commentList'
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+
+import product from './edit.png';
+import CommentList from './commentList';
 import FormData from 'form-data';
-import './commentBox.css'
+import './commentBox.css';
 
 
 export default function CommentBox(props) {
@@ -22,7 +22,7 @@ export default function CommentBox(props) {
             { headers: { 'x-auth-token': localStorage.getItem('token') } })
             .then(function (response) {
                 console.log(response);
-                if (response.data.status == 'success') {
+                if (response.data.status === 'success') {
                     setshowComment(response.data.message);
                 } else {
                     localStorage.removeItem('token');
@@ -33,7 +33,7 @@ export default function CommentBox(props) {
                 console.log(error);
 
             });
-    }, [])
+    }, [brandId, productId,history])
 
 
 
@@ -60,7 +60,7 @@ export default function CommentBox(props) {
             })
             .then(function (response) {
                 console.log(response);
-                if (response.data.status == 'success') {
+                if (response.data.status === 'success') {
                     setshowComment(response.data.message);
                     console.log(response.data.message);
                 } else {
