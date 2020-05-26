@@ -63,9 +63,10 @@ html {
 	position: relative;
 	z-index: 2;
 	font-family: "Baloo 2", cursive;
+	display: initial !important;
 }
 
-.btn1 :after {
+.btn1:after {
 	font-family: "Baloo 2", cursive;
 	border: none;
 	position: absolute;
@@ -76,13 +77,14 @@ html {
 	height: 100%;
 	background: #f7b73d;
 	transition: all 0.35s;
+	color: inherit;
 }
 
-.btn1 a :hover {
+.btn1:hover {
 	color: #36881c;
 }
 
-.btn1 :hover:after {
+.btn1:hover:after {
 	width: 100%;
 }
 
@@ -261,9 +263,12 @@ body {
 /* Scroll button */
 
 #section05 {
-	position: bottom;
-	width: 10%;
+	position: absolute;
+	width: 25ch;
 	height: 10%;
+	left: 50%;
+	top: 78vh;
+	transform: translate(-50%);
 }
 
 .demo a {
@@ -302,6 +307,7 @@ body {
 	-webkit-animation: sdb05 1.5s infinite;
 	animation: sdb05 1.5s infinite;
 	box-sizing: border-box;
+	display: block;
 }
 
 @-webkit-keyframes sdb05 {
