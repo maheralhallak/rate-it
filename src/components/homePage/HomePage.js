@@ -122,6 +122,7 @@ export default class HomePage extends Component {
                     href="#"
                   >
                     <span></span>
+                    contact
                   </a>
                   <Popover
                     {...bindPopover(popupState)}

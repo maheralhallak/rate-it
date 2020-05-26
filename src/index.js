@@ -17,7 +17,7 @@ import NaviBar from './components/navbar/NavBar';
 
 
 import Footer from './components/Footer/Footer'
-import HomePage from "./components/homePage/HomePage";
+//import HomePage from "./components/homePage/HomePage";
 import HomePage2 from './components/HomePage2/HomePage2';
 import BrandSignUp from './components/Auth/RegisterBrand';
 /* import NotFoundPage from './components/NotFoundPage' */
@@ -53,7 +53,7 @@ const routing = (
 
 
 
-        <Route exact path="/" component={HomePage} />
+       {/* <Route exact path="/" component={HomePage} /> */}
         <Route exact path="/welcome" component={HomePage2} />
         <Route path="/brands" component={Card} />
         <Route path="/items" component={Card1} />

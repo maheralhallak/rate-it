@@ -1,0 +1,15 @@
+.c-card{
+    width: 500px;
+    background: rgba(187, 186, 186, 0.043);
+    box-shadow: 10px 5px 10px rgba(0,0,0,0.4);
+    margin: 2%;
+    border: rgb(53, 52, 52) solid 2px;
+}
+.my-img {
+   background-position: center;
+   background-size: contain;
+   margin-top: 15px;
+}
+.ctext{
+    word-wrap: break-word;
+}

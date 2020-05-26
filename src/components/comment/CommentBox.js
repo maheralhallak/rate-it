@@ -80,7 +80,7 @@ export default function CommentBox(props) {
 
     const comments = showComment.map((item, index) => {
         return <CommentList
-            brandId={item.brandId}
+            /* brandId={item.brandId} */
             title={item.title}
             content={item.content}
             picture={item.picture}
@@ -107,6 +107,8 @@ export default function CommentBox(props) {
                 <ul>
                     <div>
                         <img className="img3" src={product} alt="icon" />
+                        <span>comments</span>
+                        
                     </div>
                     <div>
                         {comments}
