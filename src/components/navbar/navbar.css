@@ -1,11 +1,9 @@
 .navi {
-	
-	background: linear-gradient(
-		279deg,
-		rgba(246, 239, 3, 1) 0%,
-		rgba(11, 154, 0, 0.7203256302521008) 51%,
-		rgba(185, 228, 0, 1) 100%
-	) ;
+
+	background: linear-gradient(279deg,
+			#F5B836 0%,
+			#F5B836 51%,
+			#374F24 100%);
 
 	width: 100%;
 }
@@ -26,11 +24,11 @@
 	text-decoration: underline;
 }
 
-.d-link{
+.d-link {
 	color: black;
-}
-.d-link:hover{
-	color: black;
-	
 }
 
+.d-link:hover {
+	color: black;
+
+}
