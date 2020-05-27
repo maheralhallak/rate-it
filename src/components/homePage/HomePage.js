@@ -159,50 +159,76 @@ export default class HomePage extends Component {
       </section>
     );
     var see = (
-      <section className="secondPara1" id="secondParagraph">
-        <div className="secondPara">
-          <p style={{ color: "black" }}>Consumer review :</p>
-          <p>
-            sites have been one of the Internet’s most persistent and valuable
-            resources since the very beginning.
-          </p>
-          <hr></hr>
-          <p>
-            The website allows consumers to review brands and then alerts brands
-            to the feedback they’ve received.
-          </p>
-          <hr></hr>
-          <p>
-            Consumers can post their Good or Bad experiences about almost
-            anything known as reviews at rate-it.
-          </p>
-          <hr></hr>
-          <p>
-            Com and associated brands (If Registered) will be notified instantly
-            about the review which helps quickly resolve consumer complaints.
-          </p>
-          <hr></hr>
-          <p>
-            As a Brand, on rate-it.com you can easily connect with your
-            consumers and help them if needed or say thanks for their good
-            review.
-          </p>
-          <hr></hr>
-          <p>
-            All this shows to your potential buyers and they know they will get
-            top notch customer service if they buy from you.
-          </p>
-          <hr></hr>
-          <p>
-            The key to this site’s service is the fact that while reviews and
-            brand responses are public, each review is a one-on-one
-            correspondence—no third-parties or trolls can influence visitor
-            opinion.
-          </p>
-          <hr></hr>
+    
+        <div class="row">
+        <div class="card-deck" id="secondParagraph">
+          <div class="card col-md-12  m-5">
+            <div class="card-body">
+              <h5 class="card-title">Consumer review :</h5>
+              <p class="card-text"> Internet’s most persistent and valuable
+                    resources since the very beginning.</p>
+            </div>
+          </div>
+          <div class="card col-md-12  m-5">
+            <div class="card-body">
+              <h5 class="card-title"> The website allows consumers to :</h5>
+              <p class="card-text">review brands and then alerts brands
+                    to the feedback they’ve received..</p>
+              
+            </div>
+          </div>
+          <div class="card col-md-12  m-5">
+            <div class="card-body">
+              <h5 class="card-title">Consumers can...</h5>
+              <p class="card-text">post their Good or Bad experiences about almost
+                    anything known as reviews at rate-it.</p>
+              
+            </div>
+          </div>
+          <div class="card col-md-12  m-5">
+            <div class="card-body">
+              <h5 class="card-title"> Com and associated brands...</h5>
+              <p class="card-text">(If Registered) will be notified instantly
+                    about the review which helps quickly resolve .</p>
+              
+            </div>
+          </div>
+         
+          </div>
         </div>
-      </section>
+   
     );
+    var bee = (
+      <div class="row row2">
+        <div class="card-deck">
+      <div class="card col-md-4 m-5">
+      <div class="card-body card-b2">
+        <h5 class="card-title"> As a Brand on rate-it.com :</h5>
+        <p class="card-text">you can easily connect with your
+              consumers and help them if needed or say thanks for their good
+              review.</p>
+        
+      </div>
+    </div>
+    <div class="card col-md-4  m-0 mt-5">
+      <div class="card-body card-b2">
+        <h5 class="card-title"> All this shows :</h5>
+        <p class="card-text"> to your potential buyers and they know they will get
+              top notch customer service if they buy from you..</p>
+        
+      </div>
+    </div>
+    <div class="card col-md-4  m-5">
+      <div class="card-body card-b2">
+        <h5 class="card-title"> The key to :</h5>
+        <p class="card-text">this site’s service is the fact that while reviews and
+              brand responses are public.</p>
+        
+      </div>
+    </div>
+    </div>
+    </div>
+    )
 
     window.addEventListener("", () => {
       var newone = lr.cloneNode(true);
@@ -217,6 +243,7 @@ export default class HomePage extends Component {
           <img className="mid-icon" src={stars} alt="" />
         </main>
         {see}
+        {bee}
       </div>
     );
   }

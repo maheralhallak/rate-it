@@ -26,7 +26,7 @@ html {
 	font-size: 48px;
 	font-weight: 500;
 	background: linear-gradient(to right, #1d6109, #c36914);
-	-webkit-background-clip: text;
+
 	-webkit-text-fill-color: transparent;
 }
 
@@ -355,13 +355,22 @@ body {
 	border-radius: 80px;
 	justify-content: center;
 }
-
-.secondPara {
-	line-height: 1cm;
-	color: #36881c;
-	font-size: 24px;
-	letter-spacing: 1px;
+.card-body{
+	height: 100%;
+}
+.row .card-body h5{
+	color:#91b029;
 	font-weight: 900;
-	text-align: center;
-	width: 100vh;
+}
+.row .card-body p {
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.card-b2{
+	width: 80%;
+}
+.row2{
+	width: 80vw;
+	margin-left: 10%;
 }

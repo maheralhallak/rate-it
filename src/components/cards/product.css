@@ -11,11 +11,13 @@ body {
 	border-radius: 8px;
 	margin: 10px 0px 10px 60px;
 	box-shadow: 5px 6px 9px 5px rgb(73, 73, 73);
-	filter: grayscale(100%);
+	filter: grayscale(0%);
+	transition: ease-in-out .4s all;
 }
 .img2:hover {
 	box-shadow: 5px 6px 9px 5px rgb(87, 144, 155);
-	filter: grayscale(0%);
+	filter: grayscale(100%);
+	transition: ease-in-out .4s all;
 }
 .img3 {
 	width: 50px;
