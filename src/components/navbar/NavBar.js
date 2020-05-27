@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Navbar, Nav ,Dropdown,DropdownButton} from 'react-bootstrap';
 import PersonIcon from '@material-ui/icons/Person';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -6,9 +6,13 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import './navbar.css'
 
 
-export default class NaviBar extends Component {
+export default function NaviBar(props) {
   
-  render() {
+ 
+    const logOut = () => {
+      localStorage.clear('token');
+      window.location.href= '/signin';
+  }
     
     
     return (
@@ -55,7 +59,7 @@ export default class NaviBar extends Component {
           <Dropdown.Divider />
 
           <Dropdown.Item eventKey="3" href="#">
-            <Nav.Link className="d-link" href="/register"> <ExitToAppIcon/> Logout</Nav.Link>
+            <Nav.Link className="d-link" onClick={logOut} > <ExitToAppIcon/> Logout</Nav.Link>
             </Dropdown.Item>
             
         </DropdownType>
@@ -67,5 +71,5 @@ export default class NaviBar extends Component {
       </>
     )
   }
-}
+
 

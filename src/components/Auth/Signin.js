@@ -103,6 +103,7 @@ function SignIn() {
       
     })
   }
+  
   if (stateSignin) {
     return <Redirect to='/welcome' />
   } else {

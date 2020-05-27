@@ -66,7 +66,7 @@ body {
 
 .sRow {
     margin-top: 200px;
-    background-color: rgba(154, 153, 153, 0.099);
+    background-color: rgba(154, 153, 153, 0);
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
@@ -75,7 +75,7 @@ body {
     color: red;
 }
 .yes{
-    color: yellow;
+    color: rgb(255, 183, 0);
     
 }
 .details2-h1{
@@ -119,28 +119,36 @@ body {
     border-left: 2px solid black;
     text-transform: uppercase;
 }
-
-.Carousel{
-padding-top:24px;
-justify-content: center;
+.Caro-parent{
+height: 50vh;
+width: 100vw;
 display: flex;
-width:100vw ;
+justify-content: center;
+position: absolute;
+}
+.Carousel{
+    position: relative;
+    
+    width: 100%;
+padding-top:24px;
 height:500px;
-margin:50px;
+
 }
 
 .carousel-inner > .item > img {
 width:640px;
 height:360px;
 }
+
 img {
 max-width: 100%;
 width: auto   9;
 height: auto;
 vertical-align: middle;
 border: 0;
--ms-interpolation-mode: bicubic;
+
 }
+
 .proccess{
 padding-top: 100px;
 text-align: center;

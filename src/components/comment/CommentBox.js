@@ -35,12 +35,11 @@ export default function CommentBox(props) {
             });
     }, [brandId, productId,history])
 
-
+   
 
 
     const submitHandler = (e) => {
         e.preventDefault();
-        /*  console.log(e.target.file.files[0], e.target.name.value, e.target.email.value, e.target.phone.value, e.target.notes.value); */
 
         const formData = new FormData();
         formData.append('brandId', props.brandId);
@@ -71,7 +70,7 @@ export default function CommentBox(props) {
             .catch(function (error) {
                 console.log(error);
 
-                history.push('/');
+                history.push('/signin');
             });
 
 

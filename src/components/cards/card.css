@@ -3,6 +3,7 @@
 } */
 a:hover {
 	text-decoration: none !important;
+	
 }
 .card {
 	width: 100% !important;
@@ -60,4 +61,12 @@ h4 {
 }
 .description:hover {
 	color: rgb(46, 144, 6);
+}
+.karte{
+	border: 0px solid black;
+	transition: ease-in-out .6s all ;
+}
+.karte:hover{
+	transform: scale(1.041);
+	transition: ease-in-out .6s all ;
 }

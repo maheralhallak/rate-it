@@ -6,8 +6,13 @@ import Img0 from './assets/01.jpg';
 import Img1 from './assets/02.jpg';
 import Img2 from './assets/03.jpg';
 import Img3 from './assets/04.jpg';
-export default function HomePage2() {
 
+
+
+export default function HomePage2(props) {
+
+ 
+ 
 
   const [index, setIndex] = useState(0);
 
@@ -26,6 +31,7 @@ export default function HomePage2() {
                 <div class="details">
                   <h1 class="details-h1">
                   The only address where your complaint is precious!
+                  
                   </h1>
                   <p class="details-p">
                   Write your complaint, make your voice heard.
@@ -54,6 +60,7 @@ export default function HomePage2() {
             <div class="Carousel">
               
               <br/>
+            <div class="Caro-parent">
             <Carousel  activeIndex={index} onSelect={handleSelect} >
               <Carousel.Item>
                 <img
@@ -104,9 +111,7 @@ export default function HomePage2() {
               </Carousel.Item>
             </Carousel>
             </div>
-    
-            
-               
+            </div>
         </section>
     </div>
     )

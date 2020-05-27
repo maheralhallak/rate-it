@@ -24,9 +24,7 @@ function Product(props) {
   return <div className="mt-5  product-out">
     <div className="container-fluid">
       <div className="row">
-
         <div className="mt-5  col-md-12">
-
           <div className="image col-md-7 float-left">
             <img className="img2 one animated zoomIn" src={product.image2} alt="Product" />
           </div>

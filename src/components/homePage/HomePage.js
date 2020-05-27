@@ -119,10 +119,10 @@ export default class HomePage extends Component {
                     className="btn1"
                     variant="contained"
                     {...bindTrigger(popupState)}
-                    href="#"
+                    
                   >
                     <span></span>
-                    contact
+                  
                   </a>
                   <Popover
                     {...bindPopover(popupState)}
@@ -133,8 +133,7 @@ export default class HomePage extends Component {
                     transformOrigin={{
                       vertical: "bottom",
                       horizontal: "left",
-                    }}
-                  >
+                    }}>
                     <Box p={2}>
                       <Inputs></Inputs>
                     </Box>
