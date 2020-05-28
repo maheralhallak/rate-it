@@ -91,7 +91,7 @@ export default function Card() {
         <div className="row col-md-12" style={{ padding: 0, margin: "0 10px" }}>
           <Category uri='product' />
 
-          <div className="row col-md-8">
+          <div className="row col-md-8 mt-5">
             {/* First Card  */}
             {
               renderProducts

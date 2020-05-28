@@ -72,11 +72,11 @@ class Category extends Component {
     const { term, products } = this.state;
     return (
 
-      <div style={{ marginTop: "55px" }} className="category col-md-3 sticky-top float-left">
-        <h4>Categories</h4>
+      <div style={{ marginTop: "115px" }} className="category col-md-3 sticky-top float-left">
+        <h4>Brands</h4>
         <form>
-          <div className="container-fluid mr-5 col-md-10">
-            <input type="text" onChange={this.searchHandler} value={term}
+          <div className="container-fluid col-md-12">
+            <input className="cate-input" type="text" onChange={this.searchHandler} value={term}
               placeholder="give a brand here..."
             />
           </div>
