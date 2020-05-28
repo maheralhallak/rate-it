@@ -23,11 +23,12 @@ export default function NaviBar(props) {
 
           <Nav className="mr-auto sticky-top">
 
-            <Nav.Link className="link text-weight-bold" href="/welcome"> Home</Nav.Link>
-            <Nav.Link className="link" href="/brands">Brands</Nav.Link>
+            <Nav.Link className="link text-weight-bold" href="/welcome"> Home <h6>&#9733;</h6> </Nav.Link>
+            <Nav.Link className="link" href="/brands">Brands <h6>&#9733;</h6></Nav.Link>
             
+            <Nav.Link className="link" href="/items">Items<h6>&#9733;</h6></Nav.Link>
+            <Nav.Link className="link" href="/rate-it/shop">Shop<h6>&#9733;</h6></Nav.Link>
             
-            <Nav.Link className="link" href="/items">Items</Nav.Link>
           </Nav>
           
     {[DropdownButton].map((DropdownType, idx) => (

@@ -30,7 +30,7 @@ export default function HomePage2(props) {
               <div class="col-md-6">
                 <div class="details">
                   <h1 class="details-h1">
-                  The only address where your complaint is precious!
+                  Behind every review is an experience that matters
                   
                   </h1>
                   <p class="details-p">

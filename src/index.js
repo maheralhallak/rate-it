@@ -14,7 +14,7 @@ import Card1 from "./components/cards/card1";
 import Product from "./components/cards/Product";
 import Items from "./components/cards/items/Items";
 import NaviBar from "./components/navbar/NavBar";
-
+import Shop from './components/shop/shop';
 import Footer from "./components/Footer/Footer.js";
 import HomePage from "./components/homePage/HomePage";
 import HomePage2 from "./components/HomePage2/HomePage2";
@@ -51,6 +51,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/welcome" component={HomePage2} />
+        <Route exact path="/rate-it/shop" component={Shop} />
         <Route path="/brands" component={Card} />
         <Route path="/items" component={Card1} />
         <Route path="/signin" component={SignIn} />

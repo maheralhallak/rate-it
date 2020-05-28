@@ -6,6 +6,7 @@ import Links from './Links';
 import data from './Data';
 import { Link } from 'react-router-dom';
 
+
 const initialState = {
 
   items: data.products,
@@ -41,7 +42,7 @@ export default function Card() {
                 <img className="img1 mt-3 ml-4" src={product.image} alt="brand" />
               </Col>
               <Col md={6}>
-                {product.rating}
+              {product.rating}
               </Col>
             </Row>
           </container>

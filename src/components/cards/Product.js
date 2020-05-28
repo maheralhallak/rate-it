@@ -57,7 +57,7 @@ function Product(props) {
       </div>
     </div>
 
-    <div className="text-rating">{product.rating}</div>
+    
 
     <div className="input">
       <CommentBox brandId={props.match.params.id} />
