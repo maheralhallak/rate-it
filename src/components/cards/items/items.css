@@ -1,5 +1,5 @@
 .out-div {
-	background-image: url('../bg1.jpg');
+	background-image: url('./bg1.jpg');
 }
 .item-h1 {
 	padding-top: 80px;
