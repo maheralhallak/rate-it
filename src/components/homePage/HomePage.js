@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./homePage.scss";
-import mainpic13 from "./assist/mainpic13.svg";
+import haubt from "./assist/haubt.png";
 import stars from "./assist/3.png";
 import "../contact/Popup";
 import Box from "@material-ui/core/Box";
@@ -119,10 +119,8 @@ export default class HomePage extends Component {
                     className="btn1"
                     variant="contained"
                     {...bindTrigger(popupState)}
-                    
                   >
                     <span></span>
-                  
                   </a>
                   <Popover
                     {...bindPopover(popupState)}
@@ -133,7 +131,8 @@ export default class HomePage extends Component {
                     transformOrigin={{
                       vertical: "bottom",
                       horizontal: "left",
-                    }}>
+                    }}
+                  >
                     <Box p={2}>
                       <Inputs></Inputs>
                     </Box>
@@ -146,7 +145,7 @@ export default class HomePage extends Component {
 
         <div className="cover">
           <img
-            src={mainpic13}
+            src={haubt}
             alt="stars"
             style={{ width: "100%", opacity: "0.9" }}
           />
@@ -159,76 +158,82 @@ export default class HomePage extends Component {
       </section>
     );
     var see = (
-    
-        <div class="row">
+      <div class="row">
         <div class="card-deck" id="secondParagraph">
           <div class="card col-md-12  m-5">
             <div class="card-body">
               <h5 class="card-title">Consumer review :</h5>
-              <p class="card-text"> Internet’s most persistent and valuable
-                    resources since the very beginning.</p>
+              <p class="card-text">
+                {" "}
+                Internet’s most persistent and valuable resources since the very
+                beginning.
+              </p>
             </div>
           </div>
           <div class="card col-md-12  m-5">
             <div class="card-body">
               <h5 class="card-title"> The website allows consumers to :</h5>
-              <p class="card-text">review brands and then alerts brands
-                    to the feedback they’ve received..</p>
-              
+              <p class="card-text">
+                review brands and then alerts brands to the feedback they’ve
+                received..
+              </p>
             </div>
           </div>
           <div class="card col-md-12  m-5">
             <div class="card-body">
               <h5 class="card-title">Consumers can...</h5>
-              <p class="card-text">post their Good or Bad experiences about almost
-                    anything known as reviews at rate-it.</p>
-              
+              <p class="card-text">
+                post their Good or Bad experiences about almost anything known
+                as reviews at rate-it.
+              </p>
             </div>
           </div>
           <div class="card col-md-12  m-5">
             <div class="card-body">
               <h5 class="card-title"> Com and associated brands...</h5>
-              <p class="card-text">(If Registered) will be notified instantly
-                    about the review which helps quickly resolve .</p>
-              
+              <p class="card-text">
+                (If Registered) will be notified instantly about the review
+                which helps quickly resolve .
+              </p>
             </div>
           </div>
-         
-          </div>
         </div>
-   
+      </div>
     );
     var bee = (
       <div class="row row2">
         <div class="card-deck">
-      <div class="card col-md-4 m-5">
-      <div class="card-body card-b2">
-        <h5 class="card-title"> As a Brand on rate-it.com :</h5>
-        <p class="card-text">you can easily connect with your
-              consumers and help them if needed or say thanks for their good
-              review.</p>
-        
+          <div class="card col-md-4 m-5">
+            <div class="card-body card-b2">
+              <h5 class="card-title"> As a Brand on rate-it.com :</h5>
+              <p class="card-text">
+                you can easily connect with your consumers and help them if
+                needed or say thanks for their good review.
+              </p>
+            </div>
+          </div>
+          <div class="card col-md-4  m-0 mt-5">
+            <div class="card-body card-b2">
+              <h5 class="card-title"> All this shows :</h5>
+              <p class="card-text">
+                {" "}
+                to your potential buyers and they know they will get top notch
+                customer service if they buy from you..
+              </p>
+            </div>
+          </div>
+          <div class="card col-md-4  m-5">
+            <div class="card-body card-b2">
+              <h5 class="card-title"> The key to :</h5>
+              <p class="card-text">
+                this site’s service is the fact that while reviews and brand
+                responses are public.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card col-md-4  m-0 mt-5">
-      <div class="card-body card-b2">
-        <h5 class="card-title"> All this shows :</h5>
-        <p class="card-text"> to your potential buyers and they know they will get
-              top notch customer service if they buy from you..</p>
-        
-      </div>
-    </div>
-    <div class="card col-md-4  m-5">
-      <div class="card-body card-b2">
-        <h5 class="card-title"> The key to :</h5>
-        <p class="card-text">this site’s service is the fact that while reviews and
-              brand responses are public.</p>
-        
-      </div>
-    </div>
-    </div>
-    </div>
-    )
+    );
 
     window.addEventListener("", () => {
       var newone = lr.cloneNode(true);
