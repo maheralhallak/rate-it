@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./homePage.scss";
-import haubt from "./assist/haubt.png";
+import haubt from "./assist/haubt1.png";
 import stars from "./assist/3.png";
 import "../contact/Popup";
 import Box from "@material-ui/core/Box";
