@@ -36,8 +36,9 @@ body {
 	z-index: 0;
 }
 .h1 {
-	color: red;
+	color: #424874;
 	font-size: 58px;
+	font-weight: 700;
 }
 .icon1,
 .icon2,

@@ -20,7 +20,7 @@ a:hover {
 	font-weight: bolder;
 }
 .card2 {
-	background: linear-gradient(to right, #108dc7, #ef8e38);
+	background: linear-gradient(45deg,#07031a 5%, #424874 50%, #a6b1e1);
 	height: 230px !important;
 	border: none;
 	border-radius: 8px;

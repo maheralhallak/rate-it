@@ -90,10 +90,13 @@ function SignIn() {
       console.log(response);
       if (response.data.token) {
         localStorage.setItem('token',response.data.token);
+        localStorage.setItem('fullName',response.data.fullName);
+        
         axios.defaults.headers['x-auth-token'] = response.data.token;
         setStateSigin(true);
       }else {
         localStorage.setItem('token','');
+        localStorage.setItem('fullName','');
        // setWrongCredential(true);
       }
     })

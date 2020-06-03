@@ -13,7 +13,7 @@ import Rating from '@material-ui/lab/Rating';
 
 export default function CommentBox(props) {
     const [showComment, setshowComment] = useState([])
-    const [rating,setRating] = useState([]);
+    const [rating,setRating] = useState(null);
     const history = useHistory();
     console.log(props);
     const { brandId, productId } = props;
@@ -21,8 +21,11 @@ export default function CommentBox(props) {
     const handelChange = event => {
         
         setRating(event.target.value);
+        /* console.log(event.target.value); */
         
     }
+    console.log(rating);
+    
     useEffect(() => {
 
         axios.get(`/comment/${brandId}${productId ? `/${productId}` : ''}`,
@@ -49,14 +52,16 @@ export default function CommentBox(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-
+        
+        
         const formData = new FormData();
         formData.append('brandId', props.brandId);
         formData.append('productId', props.productId || null);
         formData.append('title', e.target.title.value);
         formData.append('content', e.target.content.value);
         formData.append('picture', e.target.file.files[0]);
-        formData.append('rating', e.target.value)
+        formData.append('rating', rating)
+        formData.append('userName', localStorage.getItem('fullName'))
         axios.post('/comment',
 
             formData,
@@ -93,6 +98,8 @@ export default function CommentBox(props) {
             title={item.title}
             content={item.content}
             picture={item.picture}
+            rating={item.rating}
+            fullName={item.userName}
             updater = {updateResultHandler}
         />
     });
@@ -106,7 +113,7 @@ export default function CommentBox(props) {
                 <div class="col-md-6">
                     <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent" >
               
-              <Rating  name="rating" defaultValue={1} max={5} value={rating} onChange={(setRating)=>handelChange(setRating)} />
+              <Rating  name="rating" defaultValue={1} max={5} value={rating} onChange={(e)=>handelChange(e)} />
               </Box></div>
                 <input name="file" className="col-6 product-input" type="file" id="exampleFormControlFile1" />
 

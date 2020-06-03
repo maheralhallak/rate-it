@@ -140,7 +140,7 @@ export default function BrandSignUp() {
         } else {
           if (result.data.status === "success") {
             //redirect login
-            history.push('/')
+            history.push('/signin')
           } else {
             //alert message
             console.log("somthing went wrong");
