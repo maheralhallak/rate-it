@@ -8,20 +8,20 @@ import CommentList from './commentList';
 import FormData from 'form-data';
 import './commentBox.css';
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
+
 import Rating from '@material-ui/lab/Rating';
 
 export default function CommentBox(props) {
     const [showComment, setshowComment] = useState([])
-    const [rating,setRating] =useState([]);
+    const [rating,setRating] = useState([]);
     const history = useHistory();
     console.log(props);
     const { brandId, productId } = props;
 
     const handelChange = event => {
-
+        
         setRating(event.target.value);
-        console.log(event.target.value);
+        
     }
     useEffect(() => {
 
@@ -42,7 +42,9 @@ export default function CommentBox(props) {
             });
     }, [brandId, productId,history])
 
-   
+   const updateResultHandler = (response) => {
+        setshowComment(response.data.message);
+   }
 
 
     const submitHandler = (e) => {
@@ -87,9 +89,11 @@ export default function CommentBox(props) {
     const comments = showComment.map((item, index) => {
         return <CommentList
             /* brandId={item.brandId} */
+            commentId={item._id}
             title={item.title}
             content={item.content}
             picture={item.picture}
+            updater = {updateResultHandler}
         />
     });
 
@@ -100,9 +104,9 @@ export default function CommentBox(props) {
         <div className="input ml-5">
             <form onSubmit={submitHandler}>
                 <div class="col-md-6">
-                    <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent">
-              <Typography className="ml-4" component="legend"></Typography>
-              <Rating  name="rating" defaultValue={2} max={5}  onSubmit={(event)=>handelChange(event)} />
+                    <Box className="mt-5" component="fieldset" mb={3} borderColor="transparent" >
+              
+              <Rating  name="rating" defaultValue={1} max={5} value={rating} onChange={(setRating)=>handelChange(setRating)} />
               </Box></div>
                 <input name="file" className="col-6 product-input" type="file" id="exampleFormControlFile1" />
 

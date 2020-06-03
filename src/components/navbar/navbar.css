@@ -27,6 +27,7 @@
 }
 h6{
 	display: none;
+	transition: all ease-in-out .4s;
 }
 
 .link:hover {
@@ -36,6 +37,7 @@ h6{
 	text-shadow: black 1px 1px 15px;
 }
 .link:hover h6{
+	transition: all ease-in-out .9s;
 	padding: 0;
 	margin: 0;
 	display: block;
