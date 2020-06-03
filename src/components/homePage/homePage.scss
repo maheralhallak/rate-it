@@ -2,6 +2,11 @@
 
 html {
 	scroll-behavior: smooth;
+
+}
+
+body {
+	background-color: #f4eeff;
 }
 
 .cart {
@@ -25,16 +30,17 @@ html {
 .intro-text h1 {
 	font-size: 48px;
 	font-weight: 500;
-	background: linear-gradient(to right, #1d6109, #c36914);
+	background: linear-gradient(to right, #a6b1e1, #dcd6f7);
 
 	-webkit-text-fill-color: transparent;
 }
 
 .intro-text p {
+
 	margin-top: 5px;
 	font-size: 24px;
 	font-weight: 900;
-	color: #36881c;
+	color: #a6b1e1;
 }
 
 .example {
@@ -52,7 +58,7 @@ html {
 	line-height: 40px;
 	font-size: 22px;
 	text-decoration: none;
-	color: #123b0e;
+	color: #a6b1e1;
 	letter-spacing: 2px;
 	text-align: center;
 	position: relative;
@@ -75,13 +81,13 @@ html {
 	left: 0;
 	width: 0;
 	height: 100%;
-	background: #f7b73d;
+	background: #dcd6f7;
 	transition: all 0.35s;
 	color: inherit;
 }
 
 .btn1:hover {
-	color: #36881c;
+	color: #dcd6f7;
 }
 
 .btn1:hover:after {
@@ -101,7 +107,7 @@ html {
 	padding-top: 200px;
 	height: 100%;
 	/* if you have PNG picture you can add a shadow to it by using the filter. */
-	filter: drop-shadow(0px 10px 6px rgb(219, 151, 4));
+	filter: drop-shadow(0px 10px 6px #424874);
 	animation: drop 2.5s ease;
 }
 
@@ -180,7 +186,7 @@ body {
 	font-size: 7vw;
 	transform: skewY(0deg);
 	visibility: hidden;
-	color: #123b0e;
+	color: #424874;
 	animation: display 2s cubic-bezier(0.6, 0, 0.15, 1) 3s forwards;
 	position: relative;
 }
@@ -189,7 +195,7 @@ body {
 #text:after {
 	content: attr(data-text);
 	visibility: visible;
-	color: yellow;
+	color: #dcd6f7;
 	position: absolute;
 	left: 0;
 	display: block;
@@ -199,13 +205,13 @@ body {
 }
 
 #text:before {
-	color: rgb(233, 199, 10);
+	color: #dcd6f7;
 	clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 	animation: move-left 1.5s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
 
 #text:after {
-	color: rgb(216, 202, 8);
+	color: #dcd6f7;
 	clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 	animation: move-right 2s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
@@ -279,7 +285,7 @@ body {
 	display: inline-block;
 	-webkit-transform: translate(0, -50%);
 	transform: translate(0, -50%);
-	color: darkgreen;
+	color: #424874;
 	letter-spacing: .3em;
 	text-decoration: none;
 	transition: opacity .3s;
@@ -300,8 +306,8 @@ body {
 	width: 24px;
 	height: 24px;
 	margin-left: -12px;
-	border-left: 1px solid green;
-	border-bottom: 1px solid green;
+	border-left: 1px solid #424874;
+	border-bottom: 1px solid #424874;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	-webkit-animation: sdb05 1.5s infinite;
@@ -351,26 +357,31 @@ body {
 	min-height: 80vh;
 	margin: 100px 300px;
 
-	box-shadow: 10px 10px 5px rgba(28, 27, 27, 0.568);
+	box-shadow: 10px 10px 5px #424874;
 	border-radius: 80px;
 	justify-content: center;
 }
-.card-body{
+
+.card-body {
 	height: 100%;
 }
-.row .card-body h5{
-	color:#91b029;
-	font-weight: 900;
-}
-.row .card-body p {
-	font-size: 24px;
+
+.row .card-body h5 {
+	color: #424874;
 	font-weight: 900;
 }
 
-.card-b2{
+.row .card-body p {
+	font-size: 24px;
+	font-weight: 900;
+	color: #8695d4;
+}
+
+.card-b2 {
 	width: 80%;
 }
-.row2{
+
+.row2 {
 	width: 80vw;
 	margin-left: 10%;
 }
