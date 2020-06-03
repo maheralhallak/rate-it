@@ -34,6 +34,9 @@ a:hover {
 	height: 140px;
 	display: block;
 }
+.items-icon1 {
+	margin-left: auto;
+}
 h5 {
 	font-family: sans-serif;
 	font-weight: 900 !important;

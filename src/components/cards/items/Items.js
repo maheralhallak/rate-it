@@ -16,9 +16,11 @@ function Items(props) {
         <div className="row col-md-12 item-row">
 
           <div className="items two animated fadeInLeft delay-1s">
-            <div className="overflow">
-              <img className="item-image card-img-top" src={item.img1} alt="item-1" />
-            </div>
+            <Link to={'/items/'}>
+              <div className="overflow">
+                <img className="item-image card-img-top" src={item.img1} alt="item-1" />
+              </div>
+            </Link>
             <div className="card-body">
               <div className="item-name">
                 <a href="item.html">{item.name1}</a>
@@ -30,9 +32,11 @@ function Items(props) {
           </div>
 
           <div className="items three animated zoomIn">
-            <div className="overflow">
-              <img className="item-image card-img-top" src={item.img2} alt="item-2" />
-            </div>
+            <Link to={'/items/'}>
+              <div className="overflow">
+                <img className="item-image card-img-top" src={item.img2} alt="item-2" />
+              </div>
+            </Link>
             <div className="card-body">
               <div className="item-name">
                 <a href="item.html">{item.name2}</a>
@@ -44,9 +48,11 @@ function Items(props) {
           </div>
 
           <div className="items four animated fadeInRight delay-1s">
-            <div className="overflow">
-              <img className="item-image card-img-top" src={item.img3} alt="item-3" />
-            </div>
+            <Link to={'/items/'}>
+              <div className="overflow">
+                <img className="item-image card-img-top" src={item.img3} alt="item-3" />
+              </div>
+            </Link>
             <div className="card-body">
               <div className="item-name">
                 <a href="item.html">{item.name3}</a>
@@ -61,9 +67,9 @@ function Items(props) {
       </div>
 
       <div className="row item-btns">
-        <Link className="btn item-btn btn-outline-success five animated jackInTheBox delay-2s" to={'/'}>Home Page</Link>
-        <Link className="btn item-btn btn-outline-success six animated fadeInUp delay-2s" to={'/brands/'}>Product Page</Link>
-        <Link className="btn item-btn btn-outline-success six animated jackInTheBox delay-2s" to={'/items/'}>Items Page</Link>
+        <Link className="item-btn five animated jackInTheBox delay-2s" to={'/'}>Home Page</Link>
+        <Link className="item-btn six animated fadeInUp delay-2s" to={'/brands/'}>Product Page</Link>
+        <Link className="item-btn seven animated jackInTheBox delay-2s" to={'/items/'}>Items Page</Link>
       </div>
     </div>
   )
