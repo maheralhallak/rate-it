@@ -32,12 +32,12 @@ body {
 .details-h1{
     font-size: 60px;
     font-weight: 700;
-    color: rgb(37, 121, 3);
+    color: #424874;
 }
 .details-p{
     font-size: 30px;
     font-weight: 300;
-    color: rgb(82, 34, 7);
+    color: #303960;
     padding-bottom: 24px;
 }
 .announce-detail .img3{
@@ -45,8 +45,8 @@ body {
     
 }
 .details a {
-    color: yellow;
-    background-color: darkgreen;
+    color: #dcd6f7;
+    background-color: #424874;
     padding: 3% 12%;
     border-radius: 20px;
     text-decoration: none;
@@ -55,8 +55,8 @@ body {
     transition: ease-in-out 1s all;
 }
 .details a:hover {
-    color: yellow;
-    background-color: green;
+    color: #424874;
+    background-color: #dcd6f7;
     padding: 3% 20%;
     transition: ease-in-out 1s all;
     border-radius: 20px;
@@ -66,7 +66,7 @@ body {
 
 .sRow {
     margin-top: 200px;
-    background-color: rgba(154, 153, 153, 0);
+    background-color: #f4eeff;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
@@ -110,7 +110,7 @@ body {
 }
 .online-h{
     
-    color: rgba(16, 92, 1, 0.94);
+    color: #424874;
     display: flex;
     align-items: center;
     text-align: center;
@@ -155,6 +155,7 @@ padding-top: 100px;
 text-align: center;
 font-weight: 900;
 text-decoration: underline;
+color: #303960;
 }
 .Carousel h3{
 color: rgba(172, 15, 15, 0.646) ;

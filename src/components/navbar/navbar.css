@@ -1,12 +1,12 @@
 .navi {
 
-	background: #dddddd !important;
+	background: #dcd6f7 !important;
 	
 	width: 100%;
 }
 
 .link {
-	color: black !important;
+	color: #424874 !important;
 	font-variant: small-caps;
 	font-weight: 700;
 	font-size: 20px;
@@ -22,8 +22,11 @@
 .link:nth-child(1){
 	border-left: 1px solid black;
 }
-.link:nth-child(4){
+.link:nth-child(5){
 	border-right: none ;
+}
+.link:nth-child(5){
+	width: 200px;
 }
 h6{
 	display: none;
@@ -33,8 +36,8 @@ h6{
 .link:hover {
 	padding: 0 10px;
 	transition: all ease .4s;
-	color: greenyellow !important;
-	text-shadow: black 1px 1px 15px;
+	color: #a6b1e1 !important;
+	
 }
 .link:hover h6{
 	transition: all ease-in-out .9s;

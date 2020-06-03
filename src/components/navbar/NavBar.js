@@ -28,7 +28,7 @@ export default function NaviBar(props) {
             
             <Nav.Link className="link" href="/items">Items<h6>&#9733;</h6></Nav.Link>
             <Nav.Link className="link" href="/rate-it/shop">Shop<h6>&#9733;</h6></Nav.Link>
-            
+            <Nav.Link className="link" href="/rate-it/shop">Our Community <h6>&#9733;</h6></Nav.Link>
           </Nav>
           
     {[DropdownButton].map((DropdownType, idx) => (
