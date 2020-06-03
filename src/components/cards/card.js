@@ -33,39 +33,41 @@ export default function Card() {
   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
   console.log(indexOfFirstItem, indexOfLastItem, currentItems)
   const renderProducts = currentItems.map((product, index) => {
-    return (<div key={product.name} className="col-md-6 mt-5" >
-      <Link to={'/product/' + product.id}>
-        <div className="card mt-0 karte" style={{ margin: "0 5px" }}>
-          <container>
-            <Row className="show-grid">
-              <Col md={6}>
+    return (<div key={product.name} className="col-md-6 mt-5 text-wrap" >
+
+      <div className="card mt-0 karte" style={{ margin: "0 5px" }}>
+        <container>
+          <Row className="show-grid">
+            <Col md={6}>
+              <Link to={'/product/' + product.id}>
                 <img className="img1 mt-3 ml-4" src={product.image} alt="brand" />
-              </Col>
-              <Col md={6}>
+              </Link>
+            </Col>
+            <Col md={6}>
               {product.rating}
-              </Col>
-            </Row>
-          </container>
-          <h6 className="d-block font-weight-bold text-dark text-center mt-3">{product.name}</h6>
-          <div className="justify-content-around d-flex">
-            <div className="card-body col-md-4">
-              {product.icon1}
-              <h5 className="text-center d-block  text-dark">{product.return}</h5>
-              <span className="inCard text-nowrap text-dark font-weight-light text-center ">{product.returnText}</span>
-            </div>
-            <div className="card-body col-md-4 text-nowrap bd-highlight">
-              {product.icon2}
-              <h5 className="text-center d-block font-weight-bold text-dark">{product.speed}</h5>
-              <span className="inCard text-center text-dark text-nowrap">{product.speedText}</span>
-            </div>
-            <div className="card-body col-md-4">
-              {product.icon3}
-              <h5 className="ml-3 font-weight-bold text-dark d-block ">{product.resolved}</h5>
-              <span className="inCard ml-2 text-dark text-nowrap">{product.resolvedText}</span>
-            </div>
+            </Col>
+          </Row>
+        </container>
+        <h6 className="d-block font-weight-bold text-dark text-center mt-3">{product.name}</h6>
+        <div className="justify-content-around d-flex text-wrap">
+          <div className="card-body col-md-4 text-center d-block">
+            {product.icon1}
+            <h5 className="text-dark text-center d-block ">{product.return}</h5>
+            <span className="inCard text-center d-block text-nowrap text-dark font-weight-light">{product.returnText}</span>
+          </div>
+          <div className="card-body col-md-4 bd-highlight text-center d-block">
+            {product.icon2}
+            <h5 className="font-weight-bold text-center d-block text-dark">{product.speed}</h5>
+            <span className="inCard text-center d-block text-dark text-nowrap">{product.speedText}</span>
+          </div>
+          <div className="card-body col-md-4 text-center d-block">
+            {product.icon3}
+            <h5 className="font-weight-bold text-dark text-center d-block ">{product.resolved}</h5>
+            <span className="inCard text-center d-block text-dark text-nowrap">{product.resolvedText}</span>
           </div>
         </div>
-      </Link>
+      </div>
+
     </div>);
   });
   // Logic for displaying page numbers
