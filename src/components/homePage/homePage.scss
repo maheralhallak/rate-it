@@ -357,7 +357,7 @@ body {
 	min-height: 80vh;
 	margin: 100px 300px;
 
-	box-shadow: 10px 10px 5px rgba(28, 27, 27, 0.568);
+	box-shadow: 10px 10px 5px #424874;
 	border-radius: 80px;
 	justify-content: center;
 }
@@ -367,13 +367,14 @@ body {
 }
 
 .row .card-body h5 {
-	color: #91b029;
+	color: #424874;
 	font-weight: 900;
 }
 
 .row .card-body p {
 	font-size: 24px;
 	font-weight: 900;
+	color: #8695d4;
 }
 
 .card-b2 {
